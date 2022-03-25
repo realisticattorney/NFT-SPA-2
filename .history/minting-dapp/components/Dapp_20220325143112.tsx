@@ -356,7 +356,7 @@ const Dapp = () => {
           <div className="no-wallet">
             {!userAddress ? (
               <button
-                className="w-[152px]  font-bold py-1.5 px-3 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                className="w-[152px]  font-bold py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
                 disabled={provider === undefined}
                 onClick={() => connectWallet()}

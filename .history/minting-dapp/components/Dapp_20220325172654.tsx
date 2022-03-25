@@ -270,7 +270,7 @@ const Dapp = () => {
           Mint Demons Gaze
         </h1>
         <a
-          href="https://rinkeby.etherscan.io/address/0xb966a41C4a5D25A6Eb2c776C90004D7256FCF690"
+          href="https://testnets.opensea.io/collection/monster-eye-v2"
           target="_blank"
           rel="noreferrer"
           className="text-lg sm:text-xl font-medium text-gray-100"
@@ -393,3 +393,4 @@ const Dapp = () => {
 };
 
 export default Dapp;
+// https://rinkeby.etherscan.io/address/0xb966a41C4a5D25A6Eb2c776C90004D7256FCF690

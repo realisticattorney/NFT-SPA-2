@@ -130,7 +130,7 @@ const CarouselCollection = () => {
             href="https://testnets.opensea.io/collection/monster-eye-v2"
             target="_blank"
             rel="noreferrer"
-            className="text-lg  truncate sm:text-xl font-medium text-gray-100 sm:ml-20"
+            className="text-lg  truncate sm:text-xl font-medium text-white sm:ml-20"
           >
             View All
             <ArrowRightAltIcon

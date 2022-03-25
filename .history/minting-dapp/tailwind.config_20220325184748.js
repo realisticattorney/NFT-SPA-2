@@ -9,9 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans2: ["'Radhani'", ...defaultTheme.fontFamily.sans],
+        sans: ["'Radhani'", ...defaultTheme.fontFamily.mono],
         mono: ["'Orbitron'", ...defaultTheme.fontFamily.mono],
-        serif: ["'Spartan'", ...defaultTheme.fontFamily.serif],
       },
       opacity: ['disabled'],
       backgroundColor: ['disabled'],

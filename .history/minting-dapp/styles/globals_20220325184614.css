@@ -235,46 +235,36 @@ svg path {
   font-display: swap;
 }
 
+
+
+
+
+
 @font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Light.ttf');
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Regular.ttf');
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Medium.ttf');
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Medium.ttf');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-SemiBold.ttf');
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-SemiBold.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Bold.ttf');
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Bold.ttf');
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aldrich';
-  src: url('/fonts/Aldrich/Aldrich-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
   font-display: swap;
 }

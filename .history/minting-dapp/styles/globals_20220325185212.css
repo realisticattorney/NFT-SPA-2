@@ -244,28 +244,28 @@ svg path {
 }
 @font-face {
   font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Regular.ttf');
+  src: url('/fonts/Radhani/Radhani-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Medium.ttf');
+  src: url('/fonts/Radhani/Radhani-Medium.ttf');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-SemiBold.ttf');
+  src: url('/fonts/Radhani/Radhani-SemiBold.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Bold.ttf');
+  src: url('/fonts/Radhani/Radhani-Bold.ttf');
   font-style: normal;
   font-weight: 700;
   font-display: swap;

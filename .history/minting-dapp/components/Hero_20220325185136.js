@@ -22,7 +22,7 @@ const Hero = () => {
             Gaze
           </span>
         </h1>
-        <p className="font-sans2 sm:text-lg text-gray-300 max-w-[400px]">
+        <p className="font- sm:text-lg text-gray-300 max-w-[400px]">
           Limited 2,000 unique avatar collection that will take part on a
           metaverse gaming experience.
         </p>

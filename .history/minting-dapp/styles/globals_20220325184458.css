@@ -148,133 +148,45 @@ svg path {
   font-weight: 900;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Spartan';
-  src: url('/fonts/Spartan/Spartan-Regular.ttf');
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Spartan';
-  src: url('/fonts/Spartan/Spartan-Medium.ttf');
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Medium.ttf');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Spartan';
-  src: url('/fonts/Spartan/Spartan-SemiBold.ttf');
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-SemiBold.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Spartan';
-  src: url('/fonts/Spartan/Spartan-Bold.ttf');
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Bold.ttf');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Spartan';
-  src: url('/fonts/Spartan/Spartan-ExtraBold.ttf');
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-ExtraBold.ttf');
   font-style: normal;
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Spartan';
-  src: url('/fonts/Spartan/Spartan-Black.ttf');
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Black.ttf');
   font-style: normal;
   font-weight: 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-Medium.ttf');
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-SemiBold.ttf');
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-Bold.ttf');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-ExtraBold.ttf');
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-Black.ttf');
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Light.ttf');
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Medium.ttf');
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-SemiBold.ttf');
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Radhani';
-  src: url('/fonts/Radhani/Rajdhani-Bold.ttf');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aldrich';
-  src: url('/fonts/Aldrich/Aldrich-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
   font-display: swap;
 }

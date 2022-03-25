@@ -27,7 +27,7 @@ export default class CollectionStatus extends React.Component<Props, State> {
   render() {
     return (
       <>
-        <div className="text-3xl font-bold mb-6">
+        <div className="text-3xl font-bold mb-10">
           <span className="font-sans2">Total Minted: </span>
           <span className="font-sans2 text-cyan-300">
             {this.props.totalSupply} / {this.props.maxSupply}

@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="space-x-2">
           <a>
             <button
-              className="  border-2  text-sm font-mono pb-0.7 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+              className="  border-2 font-bold font-mono pb-0.7 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                bg-gradient-to-r from-dexfi-cyan to-dexfi-pink lalalala borderGradientReverse
               "
               onClick={() => scrollTo('mint')}

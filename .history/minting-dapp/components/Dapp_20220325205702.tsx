@@ -285,7 +285,7 @@ const Dapp = () => {
         {errorMessage ? (
           <div className="error">
             <p>{errorMessage}</p>
-            <button onClick={() => setError()} className="font-sans2 font-bold mb-2">Click to close message</button>
+            <button onClick={() => setError()} className="font-sans2 font-bold">Click to close</button>
           </div>
         ) : null}
 

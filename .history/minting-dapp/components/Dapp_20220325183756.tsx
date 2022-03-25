@@ -273,7 +273,7 @@ const Dapp = () => {
           href="https://rinkeby.etherscan.io/address/0xb966a41C4a5D25A6Eb2c776C90004D7256FCF690"
           target="_blank"
           rel="noreferrer"
-          className="font-mono text-lg sm:text-xl font-medium text-gray-100"
+          className="text-lg sm:text-xl font-medium text-gray-100"
         >
           View Contract
           <ArrowRightAltIcon

@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import * as Scroll from 'react-scroll';
-import { animateScroll as scroll, scroller } from 'react-scroll';
+import {
+  animateScroll as scroll,
+  scroller,
+} from 'react-scroll';
 import Image from 'next/image';
 
 const Nav = () => {

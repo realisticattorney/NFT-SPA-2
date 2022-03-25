@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import * as Scroll from 'react-scroll';
-import { animateScroll as scroll, scroller } from 'react-scroll';
+import {
+  animateScroll as scroll,
+  scroller,
+} from 'react-scroll';
 import Image from 'next/image';
 
 const Nav = () => {
@@ -27,26 +30,26 @@ const Nav = () => {
         </div>
         <div className="relative hidden sm:flex  space-x-9 mr-2.5">
           <h1
-            className="font-mono text-sm text-gray-300 cursor-pointer"
+            className="font-mono text-gray-300 cursor-pointer"
             onClick={() => scrollTo('faq')}
           >
             About
           </h1>
           <h1
-            className="font-mono text-sm text-gray-300 cursor-pointer"
+            className="font-mono text-gray-300 cursor-pointer"
             onClick={() => scrollTo('collection')}
           >
             Collection
           </h1>
           <h1
-            className="font-mono text-sm text-gray-300 cursor-pointer"
+            className="font-mono text-gray-300 cursor-pointer"
             onClick={() => scrollTo('roadmap')}
           >
             Roadmap
           </h1>
           <div className="flex space-x-4">
             <h1
-              className="font-mono font-semibold textGradientReverse cursor-pointer mr-2"
+              className="font-semibold textGradientReverse cursor-pointer mr-2"
               onClick={() => scrollTo('mint')}
             >
               Mint Demons Gaze

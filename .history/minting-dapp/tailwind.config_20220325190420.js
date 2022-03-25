@@ -13,7 +13,7 @@ module.exports = {
         mono: ["'Orbitron'", ...defaultTheme.fontFamily.mono],
         serif: ["'Spartan'", ...defaultTheme.fontFamily.serif],
         aldrich: ["'Aldrich'", ...defaultTheme.fontFamily.serif],
-        inter: ["'Inter'", ...defaultTheme.fontFamily.serif],
+        aldrich: ["'Aldrich'", ...defaultTheme.fontFamily.serif],
       },
       opacity: ['disabled'],
       backgroundColor: ['disabled'],

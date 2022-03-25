@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const CarouselCollection = () => {
+
   const images = [
     '/images/3.png',
     '/images/15.png',

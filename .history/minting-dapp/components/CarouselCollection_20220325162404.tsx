@@ -126,13 +126,8 @@ const CarouselCollection = () => {
             distributed on the Ethereum network, and there is a total of 2000
             cards.
           </h1>
-          <a
-            href="https://testnets.opensea.io/collection/monster-eye-v2"
-            target="_blank"
-            rel="noreferrer"
-            className="text-lg  truncate sm:text-xl font-medium text-white sm:ml-20"
-          >
-            View All
+          <h1 className="text-lg  truncate sm:text-xl font-medium text-white sm:ml-20">
+            View All{' '}
             <ArrowRightAltIcon
               sx={{
                 color: '#ffff',
@@ -141,7 +136,7 @@ const CarouselCollection = () => {
                 marginLeft: '5px',
               }}
             />
-          </a>
+          </h1>
         </div>
       </div>
     </div>

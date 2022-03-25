@@ -127,7 +127,7 @@ const CarouselCollection = () => {
             cards.
           </h1>
           <a
-            href="https://testnets.opensea.io/collection/monster-eye-v2"
+            href="https://github.com/realisticattorney"
             target="_blank"
             rel="noreferrer"
             className="text-lg  truncate sm:text-xl font-medium text-white sm:ml-20"
@@ -149,3 +149,4 @@ const CarouselCollection = () => {
 };
 
 export default CarouselCollection;
+// https://testnets.opensea.io/collection/monster-eye-v2

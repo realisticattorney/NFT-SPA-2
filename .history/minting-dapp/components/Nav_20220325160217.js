@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import * as Scroll from 'react-scroll';
+import * as Scroll from "react-scroll";
 import {
   // Link,
   Element,
@@ -8,16 +8,19 @@ import {
   animateScroll as scroll,
   scrollSpy,
   scroller,
-} from 'react-scroll';
+} from "react-scroll";
 
 const Nav = () => {
+
+
   const scrollTo = (whereto) => {
     scroller.scrollTo(whereto, {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart',
+      smooth: "easeInOutQuart",
     });
   };
+
 
   return (
     <div className="max-w-[1200px] w-full mx-auto sm:mt-4">
@@ -32,26 +35,12 @@ const Nav = () => {
           </Link>
         </div>
         <div className="relative hidden sm:flex  space-x-9 mr-2.5">
-          <h1 className="text-gray-300 cursor-pointer" onClick={() => scrollTo('faq')}>
-            About
-          </h1>
-          <h1
-            className="text-gray-300 cursor-pointer"
-            onClick={() => scrollTo('collection')}
-          >
-            Collection
-          </h1>
-          <h1
-            className="text-gray-300 cursor-pointer"
-            onClick={() => scrollTo('roadmap')}
-          >
-            Roadmap
-          </h1>
+          {/* <ModalMenu /> */}
+          <h1 className="text-gray-300">About</h1>
+          <h1 className="text-gray-300">Collection</h1>
+          <h1 className="text-gray-300">Roadmap</h1>
           <div className="flex space-x-4">
-            <h1
-              className="font-semibold textGradientReverse cursor-pointer"
-              onClick={() => scrollTo('mint')}
-            >
+            <h1 className="font-semibold textGradientReverse">
               Mint Demons Gaze
             </h1>
             <div className="rounded-full shadow">

@@ -75,7 +75,7 @@ const CarouselCollection = () => {
   }, [windowSize]);
 
   return (
-    <div className="mt-20" id="collection">
+    <div className="mt-20" id>
       <div className="mb-5 max-w-[1200px] mx-auto z-40">
         <h1 className="text-3xl font-bold text-dexfi-light_cyan z-40 px-6">
           Collection

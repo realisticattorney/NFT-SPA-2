@@ -36,21 +36,21 @@ const Nav = () => {
             About
           </h1>
           <h1
-            className="text-gray-300 cursor-pointer"
-            onClick={() => scrollTo('collection')}
+            className="text-gray-300"
+            onClick={() => scrollTo('scroll-to-projects')}
           >
             Collection
           </h1>
           <h1
-            className="text-gray-300 cursor-pointer"
-            onClick={() => scrollTo('roadmap')}
+            className="text-gray-300"
+            onClick={() => scrollTo('scroll-to-projects')}
           >
             Roadmap
           </h1>
           <div className="flex space-x-4">
             <h1
-              className="font-semibold textGradientReverse cursor-pointer"
-              onClick={() => scrollTo('mint')}
+              className="font-semibold textGradientReverse"
+              onClick={() => scrollTo('scroll-to-projects')}
             >
               Mint Demons Gaze
             </h1>

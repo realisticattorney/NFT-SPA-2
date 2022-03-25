@@ -50,7 +50,7 @@ const Nav = () => {
           <div className="flex space-x-4">
             <h1
               className="font-semibold textGradientReverse cursor-pointer"
-              onClick={() => scrollTo('mint')}
+              onClick={() => scrollTo('scroll-to-projects')}
             >
               Mint Demons Gaze
             </h1>

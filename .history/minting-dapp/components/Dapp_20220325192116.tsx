@@ -279,7 +279,7 @@ const Dapp = () => {
           <ArrowRightAltIcon
             sx={{
               color: '#ffff',
-              fontSize: 24,
+              fontSize: 28,
               marginTop: '-1px',
               marginLeft: '5px',
             }}

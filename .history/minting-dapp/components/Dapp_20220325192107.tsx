@@ -273,13 +273,13 @@ const Dapp = () => {
           href="https://rinkeby.etherscan.io/address/0xb966a41C4a5D25A6Eb2c776C90004D7256FCF690"
           target="_blank"
           rel="noreferrer"
-          className="font-mono text-sm sm:text-xl font-medium self-center text-gray-100"
+          className="font-mono text-sm sm:text-xl font-medium text-gray-100"
         >
           View Contract
           <ArrowRightAltIcon
             sx={{
               color: '#ffff',
-              fontSize: 24,
+              fontSize: 28,
               marginTop: '-1px',
               marginLeft: '5px',
             }}

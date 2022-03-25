@@ -262,9 +262,9 @@ const Dapp = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto px-6">
-      <div className="mb-4 sm:mb-8 flex justify-between z-0">
+      <div className="mb-4 sm:mb-8 flex justify-between z-0 self-center">
         <h1
-          className="font-mono text-sm sm:text-xl font-semibold self-center textGradientReverse z-50"
+          className="font-mono text-sm sm:text-xl font-semibold textGradientReverse z-50"
           id="mint"
         >
           Mint Demons Gaze
@@ -273,13 +273,13 @@ const Dapp = () => {
           href="https://rinkeby.etherscan.io/address/0xb966a41C4a5D25A6Eb2c776C90004D7256FCF690"
           target="_blank"
           rel="noreferrer"
-          className="font-mono text-sm sm:text-xl font-medium self-center text-gray-100"
+          className="font-mono text-sm sm:text-xl font-medium text-gray-100"
         >
           View Contract
           <ArrowRightAltIcon
             sx={{
               color: '#ffff',
-              fontSize: 24,
+              fontSize: 28,
               marginTop: '-1px',
               marginLeft: '5px',
             }}

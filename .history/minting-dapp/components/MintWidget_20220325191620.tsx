@@ -99,16 +99,16 @@ export default class MintWidget extends React.Component<Props, State> {
                   <h1 className="-m-1">Max 5 Demons per trasaction</h1>
                 </div>
               </div>
-              <div className="text-gray-300 font-sans2 font-medium md:mr-10 mt-4 sm:hidden">
+              <div className="text-gray-300 font-medium md:mr-10 mt-4 sm:hidden">
                 {utils.formatEther(
                   this.props.tokenPrice.mul(this.state.mintAmount)
                 )}{' '}
                 ETH + Gas Fee
                 <h1>Max 5 Demons per trasaction</h1>
               </div>
-              <div className="borderGradient w-min mt-6 sm:mt-10">
+              <div className="borderGradient w-min mt-10">
                 <button
-                  className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                  className="w-[132px] tracking-wide text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
                   onClick={() => this.mint()}
                 >

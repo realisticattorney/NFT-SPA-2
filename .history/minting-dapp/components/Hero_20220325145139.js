@@ -36,11 +36,11 @@ const Hero = () => {
               <h1 className="text-xs1 text-gray-300">Artworks</h1>
             </div>
             <div>
-              <h1 className="truncate text-xl text-gray-300">1,446</h1>
+              <h1 className="truncate text-xl">1,446</h1>
               <h1 className="text-xs1 text-gray-300">Owners</h1>
             </div>
             <div>
-              <h1 className="truncate text-xl text-gray-300">48,200</h1>
+              <h1 className="truncate text-xl">48,200</h1>
               <h1 className="text-xs1 text-gray-300">Volume Traded</h1>
             </div>
           </div>

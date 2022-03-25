@@ -32,16 +32,16 @@ const Hero = () => {
         <div className="">
           <div className="flex font-medium text-white space-x-6 justify-between sm:justify-start">
             <div>
-              <h1 className="truncate text-xl text-gray-300">2,000</h1>
+              <h1 className="truncate text-xl">2,000</h1>
               <h1 className="text-xs1 text-gray-300">Artworks</h1>
             </div>
             <div>
-              <h1 className="truncate text-xl text-gray-300">1,446</h1>
+              <h1 className="truncate text-xl">1,446</h1>
               <h1 className="text-xs1 text-gray-300">Owners</h1>
             </div>
             <div>
-              <h1 className="truncate text-xl text-gray-300">48,200</h1>
-              <h1 className="text-xs1 text-gray-300">Volume Traded</h1>
+              <h1 className="truncate text-xl">48,200</h1>
+              <h1 className="text-xs1">Volume Traded</h1>
             </div>
           </div>
         </div>

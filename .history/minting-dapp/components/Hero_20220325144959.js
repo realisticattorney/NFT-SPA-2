@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className="w-full grid grid-cols-2 grid-rows-2 sm:mt-10 mb-20 sm:mb-32 sm:grid-rows-1 sm:max-w-[1200px] sm:mx-auto">
+    <div className="w-full grid grid-cols-2 grid-rows-2 sm:mt-10 sm:mb-32 sm:grid-rows-1 sm:max-w-[1200px] sm:mx-auto">
       <div className="flex-col px-4 sm:px-6 py-10 sm:py-0 sm:mt-0 flex-grow row-start-1 sm:row-start-1 col-span-2 sm:col-span-1 space-y-6">
         <h1 className="text-7xl sm:text-8xl tracking-wide font-bold textGradient w-min">
           Demons
@@ -30,18 +30,18 @@ const Hero = () => {
           </Link>
         </div>
         <div className="">
-          <div className="flex font-medium text-white space-x-6 justify-between sm:justify-start">
+          <div className="flex font-medium text-white space-x-6 just">
             <div>
-              <h1 className="truncate text-xl text-gray-300">2,000</h1>
-              <h1 className="text-xs1 text-gray-300">Artworks</h1>
+              <h1 className="truncate text-xl">2,000</h1>
+              <h1 className="text-xs1">Artworks</h1>
             </div>
             <div>
-              <h1 className="truncate text-xl text-gray-300">1,446</h1>
-              <h1 className="text-xs1 text-gray-300">Owners</h1>
+              <h1 className="truncate text-xl">1,446</h1>
+              <h1 className="text-xs1">Owners</h1>
             </div>
             <div>
-              <h1 className="truncate text-xl text-gray-300">48,200</h1>
-              <h1 className="text-xs1 text-gray-300">Volume Traded</h1>
+              <h1 className="truncate text-xl">48,200</h1>
+              <h1 className="text-xs1">Volume Traded</h1>
             </div>
           </div>
         </div>

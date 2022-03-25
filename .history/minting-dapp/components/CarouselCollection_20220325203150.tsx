@@ -87,7 +87,7 @@ const CarouselCollection = () => {
           showIndicators={false}
           preventMovementUntilSwipeScrollTolerance={true}
           interval={5000}
-          swipeScrollTolerance={25}
+          swipeScrollTolerance={15}
           autoFocus={false}
           centerSlidePercentage={slidePercentage}
           centerMode={true}

@@ -87,10 +87,12 @@ const CarouselCollection = () => {
           showIndicators={false}
           preventMovementUntilSwipeScrollTolerance={true}
           interval={5000}
-          swipeScrollTolerance={25}
+          swipeScrollTolerance={15}
           autoFocus={false}
+          // selectedItem={selectedItem}
           centerSlidePercentage={slidePercentage}
           centerMode={true}
+          // onChange={(selectedItem) => setSelectedItem(selectedItem + 1)}
           transitionTime={680}
           showArrows={true}
         >

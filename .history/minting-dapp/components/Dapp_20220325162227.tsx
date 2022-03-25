@@ -9,7 +9,6 @@ import CollectionStatus from './CollectionStatus';
 import MintWidget from './MintWidget';
 import Whitelist from '../lib/Whitelist';
 import Link from 'next/link';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   CollectionConfig.contractName +

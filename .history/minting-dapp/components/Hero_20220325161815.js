@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-
 const Hero = () => {
   return (
     <div className="w-full grid grid-cols-2 grid-rows-2 sm:mt-10 mb-20 sm:mb-32 sm:grid-rows-1 sm:max-w-[1200px] sm:mx-auto">
@@ -12,7 +11,7 @@ const Hero = () => {
             Gaze
           </span>
         </h1>
-        <p className="sm:text-lg text-gray-300 max-w-[400px]">
+        <p className="sm:text-lg text-gray-300">
           Limited 2,000 unique avatar collection that will take part on a
           metaverse gaming experience.
         </p>
@@ -21,19 +20,11 @@ const Hero = () => {
           <Link href="/swap">
             <a>
               <button
-                className="  border-2 font-bold pb-0.7 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                className="w-[132px] border-2 font-bold py-0.5 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                bg-gradient-to-r from-dexfi-cyan to-dexfi-pink lalalala borderGradientReverse
               "
               >
                 Explore
-                <ArrowRightAltIcon
-                sx={{
-                  color: '#ffff',
-                  fontSize: 28,
-                  marginTop: '-1px',
-                  marginLeft: '5px',
-                }}
-              />
               </button>
             </a>
           </Link>

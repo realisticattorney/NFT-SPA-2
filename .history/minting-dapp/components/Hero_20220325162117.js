@@ -12,7 +12,7 @@ const Hero = () => {
             Gaze
           </span>
         </h1>
-        <p className="sm:text-lg text-gray-300 max-w-[400px]">
+        <p className="sm:text-lg text-gray-300">
           Limited 2,000 unique avatar collection that will take part on a
           metaverse gaming experience.
         </p>
@@ -29,7 +29,8 @@ const Hero = () => {
                 <ArrowRightAltIcon
                 sx={{
                   color: '#ffff',
-                  fontSize: 28,
+                  fontSize: 38,
+                  width: 38,
                   marginTop: '-1px',
                   marginLeft: '5px',
                 }}

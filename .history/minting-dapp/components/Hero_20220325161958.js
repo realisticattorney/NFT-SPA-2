@@ -12,7 +12,7 @@ const Hero = () => {
             Gaze
           </span>
         </h1>
-        <p className="sm:text-lg text-gray-300 max-w-[400px]">
+        <p className="sm:text-lg text-gray-300">
           Limited 2,000 unique avatar collection that will take part on a
           metaverse gaming experience.
         </p>
@@ -21,7 +21,7 @@ const Hero = () => {
           <Link href="/swap">
             <a>
               <button
-                className="  border-2 font-bold pb-0.7 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                className="w-[142px] text-center self-center border-2 font-bold py-0.5 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                bg-gradient-to-r from-dexfi-cyan to-dexfi-pink lalalala borderGradientReverse
               "
               >

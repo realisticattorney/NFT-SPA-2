@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <div className="w-full grid grid-cols-2 grid-rows-2 sm:grid-rows-1 sm:max-w-[1200px] sm:mx-auto">
       <div className="flex-col px-4 sm:px-6 sm:py-40 sm:mt-0 flex-grow row-start-2 sm:row-start-1 col-span-2 sm:col-span-1 space-y-6">
-        <h1 className="text-7xl sm:text-8xl tracking-wide font-bold textGradient w-min">
+        <h1 className="text-8xl tracking-wide font-bold textGradient w-min">
           Demons
-          <span className="block text-7xl sm:text-8xl tracking-wide font-bold textGradient w-min">
+          <span className="block text-8xl tracking-wide font-bold textGradient w-min">
             Gaze
           </span>
         </h1>

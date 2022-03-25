@@ -14,11 +14,11 @@ const Nav = () => {
             </a>
           </Link>
         </div>
-        <div className="relative hidden sm:flex  space-x-9 mr-2.5">
+        <div className="relative flex space-x-9 mr-2.5">
           {/* <ModalMenu /> */}
-          <h1 className="text-gray-300">About</h1>
-          <h1 className="text-gray-300">Collection</h1>
-          <h1 className="text-gray-300">Roadmap</h1>
+          <h1 className="hidden sm:flex text-gray-300">About</h1>
+          <h1 className="hidden sm:flex text-gray-300">Collection</h1>
+          <h1 className="hidden sm:flex text-gray-300">Roadmap</h1>
           <div className="flex space-x-4">
             <h1 className="font-semibold textGradientReverse">
               Mint Demons Gaze

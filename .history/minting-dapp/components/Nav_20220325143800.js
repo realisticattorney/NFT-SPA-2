@@ -8,19 +8,19 @@ const Nav = () => {
         <div className="p-3 flex mr-2.5">
           <Link href="/">
             <a className="flex">
-              <p className="text-xl font-bold ml-2 tracking-tight textGradient">
+              <p className="text-xl font-bold ml-2 truncate tracking-tight textGradient">
                 Demons Gaze
               </p>
             </a>
           </Link>
         </div>
-        <div className="relative hidden sm:flex  space-x-9 mr-2.5">
+        <div className="relative flex  space-x-3 mr-2.5">
           {/* <ModalMenu /> */}
-          <h1 className="text-gray-300">About</h1>
-          <h1 className="text-gray-300">Collection</h1>
-          <h1 className="text-gray-300">Roadmap</h1>
+          <h1 className="hidden sm:flex text-gray-300">About</h1>
+          <h1 className="hidden sm:flex text-gray-300">Collection</h1>
+          <h1 className="hidden sm:flex text-gray-300">Roadmap</h1>
           <div className="flex space-x-4">
-            <h1 className="font-semibold textGradientReverse">
+            <h1 className="font-semibold truncate textGradientReverse">
               Mint Demons Gaze
             </h1>
             <div className="rounded-full shadow">

@@ -14,7 +14,7 @@ const Nav = () => {
             </a>
           </Link>
         </div>
-        <div className="relative hidden sm:flex  space-x-9 mr-2.5">
+        <div className="relative hidden sm:flex flex space-x-9 mr-2.5">
           {/* <ModalMenu /> */}
           <h1 className="text-gray-300">About</h1>
           <h1 className="text-gray-300">Collection</h1>

@@ -102,7 +102,7 @@ const Faq = (props) => {
               id="panel2b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-medium">
+              <p className="font-sans2 text-dexfi-light_cyan font-font-medium">
                 How do I purchase Demons Gaze?
               </p>
             </AccordionSummary>
@@ -122,7 +122,7 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-medium">
+              <p className="font-sans2 text-dexfi-light_cyan font-font-medium">
                 When do Demons Gaze launch?
               </p>
             </AccordionSummary>
@@ -142,7 +142,7 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-medium">
+              <p className="font-sans2 text-dexfi-light_cyan font-font-medium">
                 How much will it cost to mint Demons Gaze?
               </p>
             </AccordionSummary>
@@ -162,7 +162,7 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-medium">
+              <p className="font-sans2 text-dexfi-light_cyan font-font-medium">
                 How many Demons Gaze can I mint?
               </p>
             </AccordionSummary>
@@ -182,7 +182,7 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-medium">
+              <p className="font-sans2 text-dexfi-light_cyan font-font-medium">
                 Secondary market Royalties?
               </p>
             </AccordionSummary>

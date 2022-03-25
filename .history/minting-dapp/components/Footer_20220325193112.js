@@ -1,7 +1,5 @@
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import { useToast } from '../hooks/useToast';
+import Image from 'next/image';
+import Link from 'next/link';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import RedditIcon from '@mui/icons-material/Reddit';
@@ -9,41 +7,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer = () => {
-  const toast = useToast();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
-  const router = useRouter();
-  async function onSubmitForm(values) {
-    console.log(values);
-    let config = {
-      method: 'post',
-      url: `/api/contact`,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      data: values,
-    };
-
-    try {
-      const response = await axios(config);
-      console.log(response);
-      if (response.status == 200) {
-        reset();
-        toast(
-          'success',
-          'Thank you for contacting us, we will be in touch soon.'
-        );
-      }
-    } catch (err) {}
-  }
-  
-  
-  
-  
   return (
     <footer className=" text-white  font-medium  p-0 sm:p-5 max-w-[1200px] mx-auto mt-40">
       <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 py-16 border-t border-b border-gray-700">
@@ -134,44 +97,10 @@ const Footer = () => {
           <div className="sm:w-[300px] mx-auto space-y-5">
             <h1 className="text-2xl font-mono px-6 sm:px-0">Suscribe to us</h1>
             <form
-              onSubmit={handleSubmit(onSubmitForm)}
-              className="grid grid-cols-1 gap-y-2.5 mt-3"
-            >
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  name="email"
-                  type="text"
-                  {...register('email', {
-                    required: {
-                      value: true,
-                      message: 'Please enter your email address',
-                    },
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'This needs to be a valid email address',
-                    },
-                  })}
-                  className={`block w-full border rounded-none shadow-sm bg-deepoe-cream text-sm font-light font-mono  py-1 px-1.5 placeholder-gray-700 focus:ring-deepoe-chocolate focus:border-deepoe-chocolate border-gray-600 focus:outline-none focus:ring-1 resize-none ${
-                    errors.email ? 'ring-0 focus:outline-none ' : null
-                  }`}
-                  placeholder="e-mail*"
-                />
-                <span className="font-mono text-sm py-2">
-                  {errors?.email?.message}
-                </span>
-              </div>
-              <div className="justify-self-end">
-                <button
-                  type="submit"
-                  className="inline-flex font-mono font-light items-center self-center justify-center py-1.2 mt-2 w-32 border border-transparent shadow text-xl  text-white bg-deepoe-chocolate focus:outline-none focus:ring-1 focus:ring-offset-2 active:outline-none"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+          onSubmit={handleSubmit(onSubmitForm)}
+          className="grid grid-cols-1 gap-y-2.5 mt-3"
+        >
+        
           </div>
         </div>
       </div>

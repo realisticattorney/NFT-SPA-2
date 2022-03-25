@@ -1,7 +1,5 @@
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useRouter } from 'next/router';
-import { useToast } from '../hooks/useToast';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import RedditIcon from '@mui/icons-material/Reddit';

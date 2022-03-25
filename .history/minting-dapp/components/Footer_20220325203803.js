@@ -148,7 +148,7 @@ const Footer = () => {
                       message: 'Address needs to be valid',
                     },
                   })}
-                  className={`inline-block w-min max-w-[200px] border font-inter rounded-tl-md rounded-bl-md shadow-sm  text-sm text-gray-800 font-light mb-1 py-1.5 px-1.5 placeholder-gray-700  border-gray-600 focus:outline-none focus:ring-1 resize-none ${
+                  className={`inline-block w-min max-w- border font-inter rounded-tl-md rounded-bl-md shadow-sm  text-sm text-gray-800 font-light mb-1 py-1.5 px-1.5 placeholder-gray-700  border-gray-600 focus:outline-none focus:ring-1 resize-none ${
                     errors.email ? 'ring-0 focus:outline-none ' : null
                   }`}
                   placeholder="e-mail*"

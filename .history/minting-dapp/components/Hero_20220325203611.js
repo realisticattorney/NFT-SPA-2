@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="flex-col px-4 sm:px-6 py-10 sm:py-0 sm:mt-0 flex-grow row-start-1 sm:row-start-1 col-span-2 sm:col-span-1 space-y-6">
         <h1 className="font-serif text-6xl sm:text-8xl tracking-wide font-bold textGradient w-min">
           Demons
-          <span className="font-serif block text-6xl sm:text-8xl tracking-wide font-bold textGradient w-min">
+          <span className="font-serif block text-xl sm:text-8xl tracking-wide font-bold textGradient w-min">
             Gaze
           </span>
         </h1>

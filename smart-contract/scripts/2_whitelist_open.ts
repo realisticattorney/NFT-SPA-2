@@ -3,7 +3,6 @@ import { MerkleTree } from 'merkletreejs';
 import keccak256 from 'keccak256';
 import CollectionConfig from './../config/CollectionConfig';
 import NftContractProvider from '../lib/NftContractProvider';
-import { ethers } from 'hardhat';
 
 async function main() {
   // Check configuration
@@ -22,7 +21,7 @@ async function main() {
   // Update sale price (if needed)
   const whitelistPrice = utils.parseEther(CollectionConfig.whitelistSale.price.toString());
   if (!await (await contract.cost()).eq(whitelistPrice)) {
-    console.log(`Updating the token price to ${CollectionConfig.whitelistSale.price} ${CollectionConfig.mainnet.symbol}...`);
+    console.log(`Updating the token price to ${CollectionConfig.whitelistSale.price} ETH...`);
 
     await (await contract.setCost(whitelistPrice)).wait();
   }

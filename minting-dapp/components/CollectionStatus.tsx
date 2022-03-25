@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  userAddress: string|null;
+  userAddress: string | null;
   totalSupply: number;
   maxSupply: number;
   isPaused: boolean;
@@ -9,11 +9,9 @@ interface Props {
   isUserInWhitelist: boolean;
 }
 
-interface State {
-}
+interface State {}
 
-const defaultState: State = {
-};
+const defaultState: State = {};
 
 export default class CollectionStatus extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -22,35 +20,35 @@ export default class CollectionStatus extends React.Component<Props, State> {
     this.state = defaultState;
   }
 
-  private isSaleOpen(): boolean
-  {
+  private isSaleOpen(): boolean {
     return this.props.isWhitelistMintEnabled || !this.props.isPaused;
   }
 
   render() {
     return (
       <>
+        <div className="text-2xl font-bold mb-10">
+          <span className="label">Total Minted: </span>
+          <span className="text-cyan-300">
+            {this.props.totalSupply} / {this.props.maxSupply}
+          </span>
+        </div>
         <div className="collection-status">
-          <div className="user-address">
+          {/* <div className="user-address">
             <span className="label">Wallet address:</span>
             <span className="address">{this.props.userAddress}</span>
-          </div>
-          
-          <div className="supply">
-            <span className="label">Supply</span>
-            {this.props.totalSupply}/{this.props.maxSupply}
-          </div>
+          </div> */}
 
-          <div className="current-sale">
+          {/* <div className="current-sale">
             <span className="label">Sale status</span>
-            {this.isSaleOpen() ?
+            {this.isSaleOpen() ? (
               <>
                 {this.props.isWhitelistMintEnabled ? 'Whitelist only' : 'Open'}
               </>
-              :
+            ) : (
               'Closed'
-            }
-          </div>
+            )}
+          </div> */}
         </div>
       </>
     );

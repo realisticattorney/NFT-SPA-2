@@ -33,10 +33,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="relative hidden sm:flex  space-x-9 mr-2.5">
-          <h1
-            className="text-gray-300 cursor-pointer"
-            onClick={() => scrollTo('faq')}
-          >
+          <h1 className="text-gray-300 cursor-pointer" onClick={() => scrollTo('faq')}>
             About
           </h1>
           <h1
@@ -58,31 +55,21 @@ const Nav = () => {
             >
               Mint Demons Gaze
             </h1>
-            <a
-              href="https://github.com/realisticattorney"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full shadow mt-0.7"
-            >
+            <a className="rounded-full shadow mt-0.7">
               <Image
                 src="/images/icons8-discord-new.svg"
                 width="22px"
                 height="22px"
               />
             </a>
-            <a
-              href="https://github.com/realisticattorney"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full shadow"
-            >
+            <div className="rounded-full shadow">
               <TwitterIcon
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
                 }}
               />
-            </a>
+            </div>
           </div>
         </div>
       </div>

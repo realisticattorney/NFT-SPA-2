@@ -70,19 +70,14 @@ const Nav = () => {
                 height="22px"
               />
             </a>
-            <a
-              href="https://github.com/realisticattorney"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full shadow"
-            >
+            <div className="rounded-full shadow">
               <TwitterIcon
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
                 }}
               />
-            </a>
+            </div>
           </div>
         </div>
       </div>

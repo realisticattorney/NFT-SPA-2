@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col md:min-w-[600px] self-center">
-          <div className="max-w-[450px] md:w-[300px] mx-auto space-y-5 pl-6 mb-5">
+          <div className="w-[260px] md:w-[300px] mx-auto space-y-5 p-6 mb-5">
             <h1 className="text-2xl font-mono  sm:px-0">Suscribe to us</h1>
             <form onSubmit={handleSubmit(onSubmitForm)} className="flex">
               <div className="">

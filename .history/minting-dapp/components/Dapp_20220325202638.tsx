@@ -62,6 +62,22 @@ const Dapp = () => {
             <strong>privacy and security</strong> a lot so we limit the wallet
             options on the DAPP.
             <br />
+            <br />
+            But don{"'"}t worry! <span className="emoji">😃</span> You can
+            always interact with the smart-contract through{' '}
+            <Link href={generateContractUrl()}>
+              {networkConfig.blockExplorer.name}
+            </Link>{' '}
+            and{' '}
+            <strong>
+              we do our best to provide you with the best user experience
+              possible
+            </strong>
+            , even from there.
+            <br />
+            <br />
+            You can also get your <strong>Whitelist Proof</strong> manually,
+            using the tool below.
           </>
         );
       }
@@ -358,10 +374,10 @@ const Dapp = () => {
         ) : null}
 
         {!userAddress || !isSoldOut() ? (
-          <div className="borderGradient w-min mt-2">
+          <div className="borderGradient w-min">
             {!userAddress ? (
               <button
-                className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                className="w-[172px] py-1.5 px-1 mt-2 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
                 disabled={provider === undefined}
                 onClick={() => connectWallet()}

@@ -62,6 +62,22 @@ const Dapp = () => {
             <strong>privacy and security</strong> a lot so we limit the wallet
             options on the DAPP.
             <br />
+            <br />
+            But don{"'"}t worry! <span className="emoji">😃</span> You can
+            always interact with the smart-contract through{' '}
+            <Link href={generateContractUrl()}>
+              {networkConfig.blockExplorer.name}
+            </Link>{' '}
+            and{' '}
+            <strong>
+              we do our best to provide you with the best user experience
+              possible
+            </strong>
+            , even from there.
+            <br />
+            <br />
+            You can also get your <strong>Whitelist Proof</strong> manually,
+            using the tool below.
           </>
         );
       }

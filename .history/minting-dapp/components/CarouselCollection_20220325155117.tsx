@@ -60,7 +60,7 @@ const CarouselCollection = () => {
   }, []);
 
   const [slidePercentage, setSlidePercentage] = useState(
-    (265 / windowSize.width!) * 100
+    (240 / windowSize.width!) * 100
   );
 
   useEffect(() => {
@@ -76,8 +76,8 @@ const CarouselCollection = () => {
 
   return (
     <div className="mt-20">
-      <div className="mb-5 max-w-[1200px] mx-auto z-40">
-        <h1 className="text-3xl font-bold text-dexfi-light_cyan z-40 px-6">
+      <div className="mb-5 max-w-[1200px] mx-auto">
+        <h1 className="text-3xl font-bold text-dexfi-light_cyan z-30 px-6">
           Collection
         </h1>
       </div>

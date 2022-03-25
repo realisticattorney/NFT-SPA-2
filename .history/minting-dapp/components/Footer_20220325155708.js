@@ -23,7 +23,7 @@ const Footer = () => {
 
             <div className="flex space-x-6 items-center">
               <a
-                href="https://github.com/realisticattorney"
+                href="https://www.germanaquila.com"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full shadow"
@@ -36,7 +36,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://github.com/realisticattorney"
+                href="https://www.germanaquila.com"
                 target="_blank"
                 rel="noreferrer"
                 className="px-0.5 rounded-full bg-dexfi-other_gray shadow"
@@ -51,7 +51,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://github.com/realisticattorney"
+                href="https://www.germanaquila.com"
                 target="_blank"
                 rel="noreferrer"
                 className="px-0.5 rounded-full bg-dexfi-other_gray shadow"
@@ -65,7 +65,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://github.com/realisticattorney"
+                href="https://www.germanaquila.com"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full shadow"
@@ -78,7 +78,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://github.com/realisticattorney"
+                href="https://www.germanaquila.com"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full shadow"
@@ -104,29 +104,13 @@ const Footer = () => {
       <div className="flex justify-between py-6 text-sm text-gray-200 font-light">
         <h1>© 2022. All rights reserved</h1>
         <div className="items-center flex">
-          <a
-            href="https://github.com/realisticattorney"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a>
             Terms & Conditions <span className="mx-2">|</span>
           </a>
-          <a
-            href="https://github.com/realisticattorney"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-1"
-          >
+          <a className="ml-1">
             Privacy Policy <span className="mx-2">|</span>
           </a>
-          <a
-            href="https://github.com/realisticattorney"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-1"
-          >
-            Sitemap
-          </a>
+          <a className="ml-1">Sitemap</a>
         </div>
       </div>
     </footer>

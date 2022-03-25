@@ -22,25 +22,16 @@ const Footer = () => {
             </p>
 
             <div className="flex space-x-6 items-center">
-              <a
-                href="https://github.com/realisticattorney"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full shadow"
-              >
+              <div className="rounded-full shadow">
                 <TwitterIcon
                   sx={{
                     color: '#B8ADD2',
                     fontSize: 24,
                   }}
                 />
-              </a>
-              <a
-                href="https://github.com/realisticattorney"
-                target="_blank"
-                rel="noreferrer"
-                className="px-0.5 rounded-full bg-dexfi-other_gray shadow"
-              >
+              </div>
+              <Link>
+              <div className="px-0.5 rounded-full bg-dexfi-other_gray shadow">
                 <TelegramIcon
                   sx={{
                     color: '#27262C',
@@ -49,13 +40,9 @@ const Footer = () => {
                     paddingRight: '0.1rem',
                   }}
                 />
-              </a>
-              <a
-                href="https://github.com/realisticattorney"
-                target="_blank"
-                rel="noreferrer"
-                className="px-0.5 rounded-full bg-dexfi-other_gray shadow"
-              >
+              </div>
+              </Link>
+              <div className="px-0.5 rounded-full bg-dexfi-other_gray shadow">
                 <RedditIcon
                   sx={{
                     color: '#27262C',
@@ -63,39 +50,29 @@ const Footer = () => {
                     paddingBottom: '0.2rem',
                   }}
                 />
-              </a>
-              <a
-                href="https://github.com/realisticattorney"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full shadow"
-              >
+              </div>
+              <div className="rounded-full shadow">
                 <InstagramIcon
                   sx={{
                     color: '#B8ADD2',
                     fontSize: 24,
                   }}
                 />
-              </a>
-              <a
-                href="https://github.com/realisticattorney"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full shadow"
-              >
+              </div>
+              <div className="rounded-full shadow">
                 <GitHubIcon
                   sx={{
                     color: '#B8ADD2',
                     fontSize: 24,
                   }}
                 />
-              </a>
+              </div>
             </div>
           </div>
         </div>
         <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col sm:min-w-[600px] self-center">
           <div className="sm:w-[300px] mx-auto space-y-5">
-            <h1 className="text-3xl">Suscribe to us</h1>
+            <h1 className='text-3xl'>Suscribe to us</h1>
             <div></div>
           </div>
         </div>
@@ -104,29 +81,19 @@ const Footer = () => {
       <div className="flex justify-between py-6 text-sm text-gray-200 font-light">
         <h1>© 2022. All rights reserved</h1>
         <div className="items-center flex">
-          <a
-            href="https://github.com/realisticattorney"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Terms & Conditions <span className="mx-2">|</span>
-          </a>
-          <a
-            href="https://github.com/realisticattorney"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-1"
-          >
-            Privacy Policy <span className="mx-2">|</span>
-          </a>
-          <a
-            href="https://github.com/realisticattorney"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-1"
-          >
-            Sitemap
-          </a>
+          <Link href="/swap">
+            <a>
+              Terms & Conditions <span className="mx-2">|</span>
+            </a>
+          </Link>
+          <Link href="/swap">
+            <a className="ml-1">
+              Privacy Policy <span className="mx-2">|</span>
+            </a>
+          </Link>
+          <Link href="/swap">
+            <a className="ml-1">Sitemap</a>
+          </Link>
         </div>
       </div>
     </footer>

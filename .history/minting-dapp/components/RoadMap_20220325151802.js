@@ -3,11 +3,11 @@ import React from 'react';
 
 const RoadMap = () => {
   return (
-    <div className="mt-20 px-6 sm:px-0">
-      <div className="mb-5 max-w-[1152px] mx-auto">
+    <div className="mt-20 px-6 max-w-[1200px] mx-auto">
+      <div className="mb-5 max-w-[1200px] mx-auto">
         <h1 className="text-3xl font-bold text-dexfi-light_cyan">Roadmap</h1>
       </div>
-      <div className="grid grid-cols-4 grid-rows-2 h-[600px] max-w-full sm:max-w-[1152px] mx-auto glossy gap-4 p-4">
+      <div className="grid grid-cols-4 grid-rows-2 h-[600px] max-w-full sm:max-w-[1200px] mx-auto glossy  p-4">
         <div className="hidden sm:block col-span-1 relative row-span-1">
           <Image src="/images/34.png" objectFit="cover" layout="fill" />
         </div>

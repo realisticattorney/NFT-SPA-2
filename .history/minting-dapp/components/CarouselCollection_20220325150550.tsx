@@ -60,29 +60,27 @@ const CarouselCollection = () => {
   }, []);
 
   const [slidePercentage, setSlidePercentage] = useState(
-    (265 / windowSize.width!) * 100
+    (240 / windowSize.width!) * 100
   );
 
   useEffect(() => {
     if (windowSize.width && windowSize.width < 1200) {
-      let newSlidePercentage = (265 / windowSize.width) * 100;
+      let newSlidePercentage = (240 / windowSize.width) * 100;
       setSlidePercentage(newSlidePercentage);
     }
     if (windowSize.width && windowSize.width > 1199) {
-      let newSlidePercentage = (265 / 1400) * 100;
+      let newSlidePercentage = (240 / 1200) * 100;
       setSlidePercentage(newSlidePercentage);
     }
   }, [windowSize]);
 
   return (
     <div className="mt-20">
-      <div className="mb-5 max-w-[1200px] mx-auto z-40">
-        <h1 className="text-3xl font-bold text-dexfi-light_cyan z-40 px-6">
-          Collection
-        </h1>
+      <div className="mb-5 max-w-[1200px] mx-auto">
+        <h1 className="text-3xl font-bold text-dexfi-light_cyan z-30">Collection</h1>
       </div>
       <div className="h-[100px] w-[0px] absolute lalalala3 right-10 top-100"></div>
-      <div className=" z-30 mt-4 mb-6  sm:mb-10 max-w-[1400px] mx-auto">
+      <div className=" z-30 mt-4  mb-10 max-w-[1200px] mx-auto">
         <Carousel
           infiniteLoop
           showStatus={false}
@@ -119,13 +117,13 @@ const CarouselCollection = () => {
         </Carousel>
       </div>
       <div>
-        <div className="sm:mb-5 flex justify-between max-w-[1200px] mx-auto px-6">
-          <h1 className="sm:text-lg text-gray-300 trucante max-w-[60vw] sm:max-w-[800px]">
+        <div className="mb-5 flex justify-between max-w-[1200px] mx-auto px-6">
+          <h1 className="sm:text-lg text-gray-300 trucante max-w-[800px]">
             The price of each Demons Gaze NFT card is 0.05 Ether, they are
             distributed on the Ethereum network, and there is a total of 2000
             cards.
           </h1>
-          <h1 className="text-lg  truncate sm:text-xl font-medium text-white sm:ml-20">
+          <h1 className="text-lg  trucate sm:text-xl font-medium text-white ml-20">
             View All -{'>'}
           </h1>
         </div>

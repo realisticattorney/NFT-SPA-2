@@ -3,7 +3,7 @@ import React from 'react';
 
 const RoadMap = () => {
   return (
-    <div className="mt-20 px-6 sm:px-0">
+    <div className="mt-20 px-6">
       <div className="mb-5 max-w-[1152px] mx-auto">
         <h1 className="text-3xl font-bold text-dexfi-light_cyan">Roadmap</h1>
       </div>

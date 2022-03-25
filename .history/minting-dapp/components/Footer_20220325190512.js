@@ -15,7 +15,7 @@ const Footer = () => {
             <h1 className="font-serif textGradient text-2xl font-bold w-min truncate">
               Demons Gaze
             </h1>
-            <p className="font-inter text-gray-200 text-sm font-extralight">
+            <p className="text-gray-200 text-sm font-light">
               Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
               nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
               placerat.
@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="font-inter flex justify-between py-6 text-sm text-gray-200 font-extralight">
+      <div className="font-inter flex justify-between py-6 text-sm text-gray-200 font-light">
         <h1>© 2022. All rights reserved</h1>
         <div className="items-center flex">
           <a

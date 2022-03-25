@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="font-inter flex justify-between py-6 text-sm text-gray-200 font-extralight">
+      <div className="font-inter flex justify-between py-6 text-sm text-gray-200 font-light">
         <h1>© 2022. All rights reserved</h1>
         <div className="items-center flex">
           <a

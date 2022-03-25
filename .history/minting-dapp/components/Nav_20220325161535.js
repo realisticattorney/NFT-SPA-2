@@ -80,7 +80,6 @@ const Nav = () => {
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
-                  marginTop: '-3px',
                 }}
               />
             </a>

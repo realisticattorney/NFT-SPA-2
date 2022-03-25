@@ -62,7 +62,7 @@ const Nav = () => {
               href="https://github.com/realisticattorney"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full shadow mt-0.5"
+              className="rounded-full shadow mt-0.4"
             >
               <Image
                 src="/images/icons8-discord-new.svg"
@@ -74,13 +74,12 @@ const Nav = () => {
               href="https://github.com/realisticattorney"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full shadow "
+              className="rounded-full shadow"
             >
               <TwitterIcon
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
-                  marginTop: '-3px',
                 }}
               />
             </a>

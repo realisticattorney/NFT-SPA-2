@@ -74,13 +74,12 @@ const Nav = () => {
               href="https://github.com/realisticattorney"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full shadow "
+              className="rounded-full shadow scroll -mt-0.7"
             >
               <TwitterIcon
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
-                  marginTop: '-3px',
                 }}
               />
             </a>

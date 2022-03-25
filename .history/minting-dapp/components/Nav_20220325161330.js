@@ -53,7 +53,7 @@ const Nav = () => {
           </h1>
           <div className="flex space-x-4">
             <h1
-              className="font-semibold textGradientReverse cursor-pointer mr-2"
+              className="font-semibold textGradientReverse cursor-pointer mr-3"
               onClick={() => scrollTo('mint')}
             >
               Mint Demons Gaze
@@ -62,7 +62,7 @@ const Nav = () => {
               href="https://github.com/realisticattorney"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full shadow mt-0.5"
+              className="rounded-full shadow mt-0.7"
             >
               <Image
                 src="/images/icons8-discord-new.svg"
@@ -74,13 +74,12 @@ const Nav = () => {
               href="https://github.com/realisticattorney"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full shadow "
+              className="rounded-full shadow"
             >
               <TwitterIcon
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
-                  marginTop: '-3px',
                 }}
               />
             </a>

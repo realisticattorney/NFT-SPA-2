@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col sm:min-w-[600px] self-center">
-          <div className="sm:w-[300px] mx-auto space-y-5 p-6 mb-5">
+          <div className="sm:w-[300px] mx-auto space-y-5 p-6">
             <h1 className="text-2xl font-mono  sm:px-0">Suscribe to us</h1>
             <form onSubmit={handleSubmit(onSubmitForm)} className="flex">
               <div className="">
@@ -148,12 +148,12 @@ const Footer = () => {
                       message: 'Address needs to be valid',
                     },
                   })}
-                  className={`block border font-inter rounded-tl-md rounded-bl-md shadow-sm bg-deepoe-cream text-sm text-gray-800 font-light mb-1 py-1.5 px-1.5 placeholder-gray-700 focus:ring-deepoe-chocolate focus:border-deepoe-chocolate border-gray-600 focus:outline-none focus:ring-1 resize-none ${
+                  className={`block border font-inter rounded-tl-md rounded-bl-md shadow-sm bg-deepoe-cream text-sm text-gray-800 font-light mb-2 py-1.5 px-1.5 placeholder-gray-700 focus:ring-deepoe-chocolate focus:border-deepoe-chocolate border-gray-600 focus:outline-none focus:ring-1 resize-none ${
                     errors.email ? 'ring-0 focus:outline-none ' : null
                   }`}
                   placeholder="e-mail*"
                 />
-                <span className="text-gray-200 font-inter text-xs1 py-2">
+                <span className=" font-inter text-xs1 py-2">
                   {errors?.email?.message}
                 </span>
               </div>

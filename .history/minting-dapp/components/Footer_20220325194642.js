@@ -128,8 +128,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col sm:min-w-[600px] self-center">
-          <div className="sm:w-[300px] mx-auto space-y-5 p-6 mb-5">
-            <h1 className="text-2xl font-mono  sm:px-0">Suscribe to us</h1>
+          <div className="sm:w-[350px] mx-auto space-y-5">
+            <h1 className="text-2xl font-mono px-6 sm:px-0">Suscribe to us</h1>
             <form onSubmit={handleSubmit(onSubmitForm)} className="flex">
               <div className="">
                 <label htmlFor="email" className="sr-only">
@@ -141,26 +141,26 @@ const Footer = () => {
                   {...register('email', {
                     required: {
                       value: true,
-                      message: 'Please enter a valid address',
+                      message: 'Please enter your email address',
                     },
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'Address needs to be valid',
+                      message: 'This needs to be a valid email address',
                     },
                   })}
-                  className={`block border font-inter rounded-tl-md rounded-bl-md shadow-sm bg-deepoe-cream text-sm text-gray-800 font-light mb-1 py-1.5 px-1.5 placeholder-gray-700 focus:ring-deepoe-chocolate focus:border-deepoe-chocolate border-gray-600 focus:outline-none focus:ring-1 resize-none ${
+                  className={`block border font-inter rounded-none shadow-sm bg-deepoe-cream text-xs1 text-gray-800 font-light  py-1 px-1.5 placeholder-gray-700 focus:ring-deepoe-chocolate focus:border-deepoe-chocolate border-gray-600 focus:outline-none focus:ring-1 resize-none ${
                     errors.email ? 'ring-0 focus:outline-none ' : null
                   }`}
                   placeholder="e-mail*"
                 />
-                <span className="text-gray-200 font-inter text-xs1 py-2">
+                <span className=" font-inter text-xs1 py-2">
                   {errors?.email?.message}
                 </span>
               </div>
               <div className="justify-self-end">
                 <button
                   type="submit"
-                  className=" border-2 text-sm  font-inter pb-1.4 ml-1 pt-1.2 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90 bg-gradient-to-r from-dexfi-cyan to-dexfi-pink lalalala4 borderGradientReverse focus:outline-none focus:ring-1 focus:ring-offset-2 active:outline-none"
+                  className=" border-2 text-sm  font-inter pb-0.7 ml-1 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90 bg-gradient-to-r from-dexfi-cyan to-dexfi-pink lalalala borderGradientReverse focus:outline-none focus:ring-1 focus:ring-offset-2 active:outline-none"
                 >
                   Submit
                 </button>

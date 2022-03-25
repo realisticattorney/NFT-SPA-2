@@ -128,7 +128,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col sm:min-w-[600px] self-center">
-          <div className="sm:w-[300px] mx-auto space-y-5 p-6 mb-5">
+          <div className="sm:w-[300px] mx-auto space-y-5 p-6">
             <h1 className="text-2xl font-mono  sm:px-0">Suscribe to us</h1>
             <form onSubmit={handleSubmit(onSubmitForm)} className="flex">
               <div className="">
@@ -153,7 +153,7 @@ const Footer = () => {
                   }`}
                   placeholder="e-mail*"
                 />
-                <span className="text-gray-200 font-inter text-xs1 py-2">
+                <span className="text-gray-100 font-inter text-xs1 py-2">
                   {errors?.email?.message}
                 </span>
               </div>

@@ -261,13 +261,13 @@ const Dapp = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto px-6">
-      <div className="mb-4 sm:mb-8 flex justify-between z-0">
-        <h1 className="text-lg sm:text-xl font-semibold textGradientReverse z-50">Mint Demons Gaze</h1>
-        <h1 className="text-lg sm:text-xl font-medium text-white">View Contract -{'>'}</h1>
+      <div className="sm:mb-8 flex justify-between z-0">
+        <h1 className="sm:text-xl font-semibold textGradientReverse z-50">Mint Demons Gaze</h1>
+        <h1 className="sm:text-xl font-medium text-white">View Contract -{'>'}</h1>
       </div>
       <div className="h-[0px] w-[0px] absolute lalalala3 left-0 bottom-90 mt-32"></div>
       
-      <div className=" glossy text-white px-5 py-7 sm:p-10 z-20">
+      <div className=" glossy text-white p-10 z-20">
         {/* {isNotMainnet() ? (
           <div className="not-mainnet">
             You are not connected to the main network.

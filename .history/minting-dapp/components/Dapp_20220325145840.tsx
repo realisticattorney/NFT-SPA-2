@@ -267,7 +267,7 @@ const Dapp = () => {
       </div>
       <div className="h-[0px] w-[0px] absolute lalalala3 left-0 bottom-90 mt-32"></div>
       
-      <div className=" glossy text-white px-5 py-7 sm:p-10 z-20">
+      <div className=" glossy text-white px-5 sm:p-10 z-20">
         {/* {isNotMainnet() ? (
           <div className="not-mainnet">
             You are not connected to the main network.

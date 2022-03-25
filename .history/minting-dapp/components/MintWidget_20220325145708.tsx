@@ -99,7 +99,7 @@ export default class MintWidget extends React.Component<Props, State> {
                   <h1>Max 5 Demons per trasaction</h1>
                 </div>
               </div>
-              <div className="text-gray-300 font-medium md:mr-10 mt-4 sm:hidden">
+              <div className="text-gray-300 font-medium md:mr-10 mt- sm:hidden">
                   {utils.formatEther(
                     this.props.tokenPrice.mul(this.state.mintAmount)
                   )}{' '}

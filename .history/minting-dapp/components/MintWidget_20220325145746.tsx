@@ -74,7 +74,7 @@ export default class MintWidget extends React.Component<Props, State> {
               <div className="flex justify-between">
                 <div className="borderGradient">
                   <button
-                    className="px-4 py-2 my-0.5 ml-0.5 bg-gradient-to-r from-dexfi-cyan to-dexfi-pink"
+                    className="px-0 py-2 my-0.5 ml-0.5 bg-gradient-to-r from-dexfi-cyan to-dexfi-pink"
                     onClick={() => this.decrementMintAmount()}
                   >
                     -

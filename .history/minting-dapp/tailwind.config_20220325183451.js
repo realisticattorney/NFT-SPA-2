@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         // mono: ["'Public Sans'", ...defaultTheme.fontFamily.mono],
-        mono: ["'Orbitron'", ...defaultTheme.fontFamily.mono],
+        mono: ["'Orbitron'", ...defaultTheme.fontFamily.sans],
       },
       opacity: ['disabled'],
       backgroundColor: ['disabled'],

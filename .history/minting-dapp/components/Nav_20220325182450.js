@@ -3,6 +3,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import * as Scroll from 'react-scroll';
 import {
   animateScroll as scroll,
+  scrollSpy,
   scroller,
 } from 'react-scroll';
 import Image from 'next/image';

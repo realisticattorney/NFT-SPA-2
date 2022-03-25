@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   variants: {
     scale: ['responsive', 'first', 'hover'],
@@ -8,10 +6,6 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        // mono: ["'Public Sans'", ...defaultTheme.fontFamily.mono],
-        mono: ["'Orbitron'", ...defaultTheme.fontFamily.mono],
-      },
       opacity: ['disabled'],
       backgroundColor: ['disabled'],
       cursor: ['disabled'],

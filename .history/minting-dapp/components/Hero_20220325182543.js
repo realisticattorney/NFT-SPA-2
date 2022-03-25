@@ -28,38 +28,38 @@ const Hero = () => {
         </p>
 
         <div className="space-x-2">
-          <a>
-            <button
-              className="  border-2 font-bold pb-0.7 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+            <a>
+              <button
+                className="  border-2 font-bold pb-0.7 pt-0.9 px-7 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                bg-gradient-to-r from-dexfi-cyan to-dexfi-pink lalalala borderGradientReverse
               "
-              onClick={() => scrollTo('mint')}
-            >
-              Explore
-              <ArrowRightAltIcon
-                sx={{
-                  color: '#ffff',
-                  fontSize: 28,
-                  marginTop: '-1px',
-                  marginLeft: '5px',
-                }}
-              />
-            </button>
-          </a>
+              >
+                Explore
+                <ArrowRightAltIcon
+                  sx={{
+                    color: '#ffff',
+                    fontSize: 28,
+                    marginTop: '-1px',
+                    marginLeft: '5px',
+                  }}
+                />
+              </button>
+            </a>
+          </Link>
         </div>
         <div className="">
           <div className="flex font-medium text-white space-x-6 justify-between sm:justify-start">
             <div>
-              <h1 className="font-mono truncate text-xl text-gray-300">2,000</h1>
-              <h1 className="font-mono text-xs1 text-gray-300">Artworks</h1>
+              <h1 className="truncate text-xl text-gray-300">2,000</h1>
+              <h1 className="text-xs1 text-gray-300">Artworks</h1>
             </div>
             <div>
-              <h1 className="font-mono truncate text-xl text-gray-300">1,446</h1>
-              <h1 className="font-mono text-xs1 text-gray-300">Owners</h1>
+              <h1 className="truncate text-xl text-gray-300">1,446</h1>
+              <h1 className="text-xs1 text-gray-300">Owners</h1>
             </div>
             <div>
-              <h1 className="font-mono truncate text-xl text-gray-300">48,200</h1>
-              <h1 className="font-mono text-xs1 text-gray-300">Volume Traded</h1>
+              <h1 className="truncate text-xl text-gray-300">48,200</h1>
+              <h1 className="text-xs1 text-gray-300">Volume Traded</h1>
             </div>
           </div>
         </div>

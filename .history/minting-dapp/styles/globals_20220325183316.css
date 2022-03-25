@@ -106,43 +106,47 @@ svg path {
   box-shadow: 120px 0 200px 100px #6f3b93, 0rem 0.5rem 30px #422a60;
 }
 
+
+
+
+
 @font-face {
-  font-family: 'Orbitron';
+  font-family: 'TiffanyStd-Demi';
   src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron/Orbitron-Medium.ttf');
+  font-family: 'TiffanyStd-Demi';
+  src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron/Orbitron-SemiBold.ttf');
+  font-family: 'TiffanyStd-Demi';
+  src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron/Orbitron-Bold.ttf');
+  font-family: 'TiffanyStd-Demi';
+  src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Orbitron';
-  src: url('/fonts/Orbitron/Orbitron-ExtraBold.ttf');
+  font-family: 'TiffanyStd-Demi';
+  src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
   font-style: normal;
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Orbitron';
+  font-family: 'TiffanyStd-Demi';
   src: url('/fonts/Orbitron/Orbitron-Black.ttf');
   font-style: normal;
   font-weight: 900;

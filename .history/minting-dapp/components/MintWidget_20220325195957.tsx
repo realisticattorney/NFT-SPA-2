@@ -80,7 +80,7 @@ export default class MintWidget extends React.Component<Props, State> {
                     -
                   </button>
                   <div className="inline-flex w-[150px]">
-                    <h1 className="text-center font-sans2 text-lg w-full font-semibold">
+                    <h1 className="text-center w-full font-semibold">
                       {this.state.mintAmount}
                     </h1>
                   </div>

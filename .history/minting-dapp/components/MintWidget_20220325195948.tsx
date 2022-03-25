@@ -70,7 +70,7 @@ export default class MintWidget extends React.Component<Props, State> {
               <img src="/build/images/preview.png" alt="Collection preview" />
             </div> */}
 
-            <div className="flex-col flex ">
+            <div className="flex-col flex font-sans2">
               <div className="flex justify-between">
                 <div className="borderGradient">
                   <button
@@ -80,12 +80,12 @@ export default class MintWidget extends React.Component<Props, State> {
                     -
                   </button>
                   <div className="inline-flex w-[150px]">
-                    <h1 className="text-center font-sans2 text-lg w-full font-semibold">
+                    <h1 className="text-center w-full font-semibold">
                       {this.state.mintAmount}
                     </h1>
                   </div>
                   <button
-                    className="px-4 py-2 mr-0.5  bg-gradient-to-r from-dexfi-cyan to-dexfi-pink"
+                    className="px-4 py-2 mr-0.5 text-lg  bg-gradient-to-r from-dexfi-cyan to-dexfi-pink"
                     onClick={() => this.incrementMintAmount()}
                   >
                     +

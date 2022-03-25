@@ -12,7 +12,7 @@ module.exports = {
         sans2: ["'Radhani'", ...defaultTheme.fontFamily.sans],
         mono: ["'Orbitron'", ...defaultTheme.fontFamily.mono],
         serif: ["'Spartan'", ...defaultTheme.fontFamily.serif],
-        aldrich: ["'Aldrich'", ...defaultTheme.fontFamily.serif],
+        aldrich: ["'Spartan'", ...defaultTheme.fontFamily.serif],
       },
       opacity: ['disabled'],
       backgroundColor: ['disabled'],

@@ -82,13 +82,13 @@ const Faq = (props) => {
               id="panel1b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-semibold">
+              <p className="font-text-dexfi-light_cyan font-semibold">
                 What is Demons Gaze?
               </p>
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="mb-4 text-gray-200 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -102,13 +102,13 @@ const Faq = (props) => {
               id="panel2b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-semibold">
+              <p className="font-text-dexfi-light_cyan font-semibold">
                 How do I purchase Demons Gaze?
               </p>
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="mb-4 text-gray-200 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -122,13 +122,13 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-semibold">
+              <p className="font-text-dexfi-light_cyan font-semibold">
                 When do Demons Gaze launch?
               </p>
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="mb-4 text-gray-200 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -142,13 +142,13 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-semibold">
+              <p className="font-text-dexfi-light_cyan font-semibold">
                 How much will it cost to mint Demons Gaze?
               </p>
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="mb-4 text-gray-200 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -162,13 +162,13 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-semibold">
+              <p className="font-text-dexfi-light_cyan font-semibold">
                 How many Demons Gaze can I mint?
               </p>
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="mb-4 text-gray-200 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -182,13 +182,13 @@ const Faq = (props) => {
               id="panel3b-header"
               className="flex p-0   justify-between text-lg font-extralight text-left "
             >
-              <p className="font-sans2 text-dexfi-light_cyan font-semibold">
+              <p className="font-text-dexfi-light_cyan font-semibold">
                 Secondary market Royalties?
               </p>
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="mb-4 text-gray-200 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.

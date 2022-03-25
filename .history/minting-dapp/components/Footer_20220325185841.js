@@ -21,7 +21,7 @@ const Footer = () => {
               placerat.
             </p>
 
-            <div className="font- flex space-x-6 items-center">
+            <div className=" flex space-x-6 items-center">
               <a
                 href="https://github.com/realisticattorney"
                 target="_blank"

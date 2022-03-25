@@ -88,7 +88,7 @@ const Faq = (props) => {
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="font-sans2 mb-4 text-gray-100 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -108,7 +108,7 @@ const Faq = (props) => {
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="font-sans2 mb-4 text-gray-100 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -128,7 +128,7 @@ const Faq = (props) => {
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="font-sans2 mb-4 text-gray-100 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -148,7 +148,7 @@ const Faq = (props) => {
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="font-sans2 mb-4 text-gray-100 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -168,7 +168,7 @@ const Faq = (props) => {
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="font-sans2 mb-4 text-gray-100 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.
@@ -188,7 +188,7 @@ const Faq = (props) => {
             </AccordionSummary>
             <AccordionDetails>
               <div className="overflow-hidden duration-300  text-sm  font-mono  text-left font-extralight  ">
-                <p className="font-sans2 mb-4 text-gray-50 mx-4">
+                <p className="font-sans2 mb-4 text-gray-100 mx-4">
                   Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
                   nunc quam ac sed turpis volutpat. Cursus sed massa non nisi,
                   placerat.

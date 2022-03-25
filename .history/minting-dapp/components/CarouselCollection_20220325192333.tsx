@@ -121,7 +121,7 @@ const CarouselCollection = () => {
       </div>
       <div>
         <div className="sm:mb-5 flex justify-between max-w-[1200px] mx-auto px-6">
-          <h1 className="font-sans2 text-sm sm:text-lg text-gray-300 trucante max-w-[60vw] sm:max-w-[800px]">
+          <h1 className="font-sans2 sm:text-lg text-gray-300 trucante max-w-[60vw] sm:max-w-[800px]">
             The price of each Demons Gaze NFT card is 0.05 Ether, they are
             distributed on the Ethereum network, and there is a total of 2000
             cards.
@@ -130,7 +130,7 @@ const CarouselCollection = () => {
             href="https://testnets.opensea.io/collection/monster-eye-v2"
             target="_blank"
             rel="noreferrer"
-            className="font-mono text-sm  truncate sm:text-xl font-medium text-gray-100 sm:ml-20"
+            className="font-mono text-lg  truncate sm:text-xl font-medium text-gray-100 sm:ml-20"
           >
             View All
             <ArrowRightAltIcon

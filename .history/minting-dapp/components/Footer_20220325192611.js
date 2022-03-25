@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className=" text-white  font-medium  p-0 sm:p-5 max-w-[1200px] mx-auto mt-40">
       <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 py-16 border-t border-b border-gray-700">
-        <div className="sm:row-start-2 flex-col sm:max-w-[600px] self-center px-6 sm:px-0">
+        <div className="sm:row-start-2 flex-col sm:max-w-[600px] self-center p-4">
           <div className="sm:w-[250px] mx-auto space-y-5">
             <h1 className="font-serif textGradient text-2xl font-bold w-min truncate">
               Demons Gaze
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
         <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col sm:min-w-[600px] self-center">
           <div className="sm:w-[300px] mx-auto space-y-5">
-            <h1 className="text-2xl font-mono px-6 sm:px-0">Suscribe to us</h1>
+            <h1 className="text-2xl font-mono">Suscribe to us</h1>
             <div></div>
           </div>
         </div>

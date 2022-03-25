@@ -19,7 +19,7 @@ const Nav = () => {
         <div className="p-3 flex mr-2.5">
           <Link href="/">
             <a className="flex">
-              <p className="font-serif  text-xl font-extrabold ml-2 tracking-tight textGradient">
+              <p className="font-serif  text-xl font-bold ml-2 tracking-tight textGradient">
                 Demons Gaze
               </p>
             </a>
@@ -55,7 +55,7 @@ const Nav = () => {
               href="https://github.com/realisticattorney"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full shadow mt-2"
+              className="rounded-full shadow mt-0.5"
             >
               <Image
                 src="/images/icons8-discord-new.svg"
@@ -73,7 +73,7 @@ const Nav = () => {
                 sx={{
                   color: '#ffff',
                   fontSize: 22,
-                  marginTop: '-4px',
+                  marginTop: '-3px',
                 }}
               />
             </a>

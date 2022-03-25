@@ -19,7 +19,7 @@ const Nav = () => {
         <div className="p-3 flex mr-2.5">
           <Link href="/">
             <a className="flex">
-              <p className="font-serif  text-xl font-extrabold ml-2 tracking-tight textGradient">
+              <p className="font-serif  text-xl font-bold ml-2 tracking-tight textGradient">
                 Demons Gaze
               </p>
             </a>

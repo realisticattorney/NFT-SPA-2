@@ -57,7 +57,7 @@ const Dapp = () => {
 
       if (browserProvider?.isMetaMask !== true) {
         setError(
-          <div className="font-sans2 text-gray-100 font-light">
+          <div className='font-sans2 text-gray-100 font-light'>
             We were not able to detect <strong>MetaMask</strong>. We value{' '}
             <strong>privacy and security</strong> a lot so we limit the wallet
             options on the DAPP.

@@ -26,7 +26,7 @@ const RoadMap = () => {
         <div className="col-span-4 sm:col-span-2 row-span-2 flex-col p-5 borderGradient space-y-6 ">
           <div className="h-[85px] flex sm:ml-3">
             <div className="w-[15px] h-[85px] bg-gradient-to-r text-transparent from-dexfi-cyan to-dexfi-pink "></div>
-            <div className="ml-4 flex-col -mt-1 self-center">
+            <div className="ml-3 flex-col -mt-1 self-center">
               <h1 className="text-dexfi-light_cyan font-sans2 font-semibold">
                 100%
               </h1>
@@ -37,7 +37,7 @@ const RoadMap = () => {
           </div>
           <div className="h-[85px] flex sm:ml-3">
             <div className="w-[15px] h-[85px] bg-gradient-to-r text-transparent from-dexfi-cyan to-dexfi-pink "></div>
-            <div className="ml-4 flex-col -mt-1 self-center">
+            <div className="ml-3 flex-col -mt-1 self-center">
               <h1 className="text-dexfi-light_cyan font-sans2 font-semibold">
                 80%
               </h1>
@@ -48,7 +48,7 @@ const RoadMap = () => {
           </div>
           <div className="h-[85px] flex sm:ml-3">
             <div className="w-[15px] h-[85px] bg-gradient-to-r text-transparent from-dexfi-cyan to-dexfi-pink "></div>
-            <div className="ml-4 flex-col -mt-1 self-center">
+            <div className="ml-3 flex-col -mt-1 self-center">
               <h1 className="text-dexfi-light_cyan font-sans2 font-semibold">
                 60%
               </h1>
@@ -59,7 +59,7 @@ const RoadMap = () => {
           </div>
           <div className="h-[85px] flex sm:ml-3">
             <div className="w-[15px] h-[85px] bg-gradient-to-r text-transparent from-dexfi-cyan to-dexfi-pink "></div>
-            <div className="ml-4 flex-col -mt-1 self-center">
+            <div className="ml-3 flex-col -mt-1 self-center">
               <h1 className="text-dexfi-light_cyan font-sans2 font-semibold">
                 40%
               </h1>
@@ -70,7 +70,7 @@ const RoadMap = () => {
           </div>
           <div className="h-[85px] flex sm:ml-3">
             <div className="w-[15px] h-[85px] bg-gradient-to-r text-transparent from-dexfi-cyan to-dexfi-pink "></div>
-            <div className="ml-4 flex-col -mt-1 self-center">
+            <div className="ml-3 flex-col -mt-1 self-center">
               <h1 className="text-dexfi-light_cyan font-sans2 font-semibold">
                 20%
               </h1>

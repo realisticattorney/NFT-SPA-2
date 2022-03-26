@@ -3,13 +3,13 @@ import React from 'react';
 
 const RoadMap = () => {
   return (
-    <div className="mt-20 sm:px-0" id="roadmap">
+    <div className="mt-20 px-4 sm:px-0" id="roadmap">
       <div className="mb-5 px-6 max-w-[1152px] mx-auto">
         <h1 className="font-mono text-3xl font-bold text-dexfi-light_cyan">
           Roadmap
         </h1>
       </div>
-      <div className="grid grid-cols-4 grid-rows-2 h-[600px] max-w-full sm:max-w-[1152px] mx-auto  gap-4 py-4 px-6">
+      <div className="grid grid-cols-4 grid-rows-2 h-[600px] max-w-full sm:max-w-[1152px] mx-auto  gap-4 p-4">
         <div className="hidden sm:block col-span-1 relative row-span-1">
           <Image src="/images/34.png" objectFit="cover" layout="fill" />
         </div>

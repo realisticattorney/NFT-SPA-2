@@ -358,7 +358,7 @@ const Dapp = () => {
         ) : null}
 
         {!userAddress || !isSoldOut() ? (
-          <div className="borderGradient w-min mt-4">
+          <div className="borderGradient w-min mt-2">
             {!userAddress ? (
               <button
                 className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90

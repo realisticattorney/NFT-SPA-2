@@ -10,7 +10,8 @@ import MintWidget from './MintWidget';
 import Whitelist from '../lib/Whitelist';
 import Link from 'next/link';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-
+import { useWeb3 } from '../components/providers/web3';
+import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
 const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   CollectionConfig.contractName +
   '.sol/' +

@@ -10,7 +10,7 @@ import Moralis from 'moralis';
 // import { registryAddress, scammExchangeAddress } from '../../config-local.js';
 // import Registry from '../../utils/Registry.json';
 // import Exchange from '../../utils/Exchange.json';
-const ContractAbi = require('../../../smart-contract/artifacts/contracts/' +
+const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   CollectionConfig.contractName +
   '.sol/' +
   CollectionConfig.contractName +

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import { ethers, BigNumber } from 'ethers';
 import { ExternalProvider, Web3Provider } from '@ethersproject/providers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -15,7 +15,7 @@ import Link from 'next/link';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useWeb3 } from './providers/web3';
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
-// import Moralis from 'moralis';
+import Moralis from 'moralis';
 const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   CollectionConfig.contractName +
   '.sol/' +
@@ -32,7 +32,6 @@ const Dapp = () => {
     authenticate,
     user,
     logout,
-    Moralis,
   } = useMoralis();
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
@@ -57,18 +56,18 @@ const Dapp = () => {
     contract && loadProvider();
   }, [contract]);
 
-  // const switchNetworkCallback = useCallback(async () => {
-  //   await Moralis.switchNetwork('0x4');
-  // }, []);
+  const switchNetworkCallback = useCallback(async () => {
+    await Moralis.switchNetwork('0x4');
+  }, []);
 
-  const authenticateCallback = async () => {
+  const authenticateCallback = = async () => {
     await authenticate({
       provider: 'web3Auth',
       clientId:
         'BD2w7iKElOcRdqglNobGn6bGPXh-JfNg3tPE7jNRmA1m4EB7KF3qDS_DOgGUwoidVMjWFyuzTncIdGntiotSkLM',
-      chainId: '0x4',
+      chainId: Moralis.Chains.ETH_RINKBEY,
     });
-  };
+  });
 
   const logoutCallback = useCallback(async () => {
     await logout();
@@ -420,12 +419,7 @@ const Dapp = () => {
 
         {!user || !isSoldOut() ? (
           <div className={styles.card}>
-            <Image
-              className={styles.img}
-              src="/images/Web3Auth.svg"
-              width={80}
-              height={80}
-            />
+            <Image className={styles.img} src="/images/Web3Auth.svg" width={80} height={80} />
             {isAuthenticating && <p className={styles.green}>Authenticating</p>}
             {authError && (
               <p className={styles.error}>

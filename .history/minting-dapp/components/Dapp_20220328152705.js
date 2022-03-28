@@ -15,7 +15,7 @@ import Link from 'next/link';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useWeb3 } from './providers/web3';
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
-// import Moralis from 'moralis';
+import Moralis from 'moralis';
 const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   CollectionConfig.contractName +
   '.sol/' +
@@ -32,7 +32,6 @@ const Dapp = () => {
     authenticate,
     user,
     logout,
-    Moralis,
   } = useMoralis();
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
@@ -66,7 +65,7 @@ const Dapp = () => {
       provider: 'web3Auth',
       clientId:
         'BD2w7iKElOcRdqglNobGn6bGPXh-JfNg3tPE7jNRmA1m4EB7KF3qDS_DOgGUwoidVMjWFyuzTncIdGntiotSkLM',
-      chainId: '0x4',
+      chainId: Moralis.Chains.ETH_RINKBEY,
     });
   };
 

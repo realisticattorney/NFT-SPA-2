@@ -93,9 +93,7 @@ export default class MintWidget extends React.Component<Props, State> {
                 </div>
                 <div className="font-sans2 text-gray-300 text-lg font-medium md:mr-10 hidden sm:block">
                   {utils.formatEther(
-                    this.props.tokenPrice
-                      ? this.props.tokenPrice.mul(this.state.mintAmount)
-                      : 0
+                    this.props.tokenPrice?.mul(this.state.mintAmount)
                   )}{' '}
                   ETH + Gas Fee
                   <h1 className="-m-1">Max 5 Demons per trasaction</h1>
@@ -103,9 +101,7 @@ export default class MintWidget extends React.Component<Props, State> {
               </div>
               <div className="text-gray-300 font-sans2 font-medium md:mr-10 mt-4 sm:hidden">
                 {utils.formatEther(
-                  this.props.tokenPrice
-                    ? this.props.tokenPrice.mul(this.state.mintAmount)
-                    : 0
+                  this.props.tokenPrice.mul(this.state.mintAmount)
                 )}{' '}
                 ETH + Gas Fee
                 <h1>Max 5 Demons per trasaction</h1>
@@ -118,13 +114,13 @@ export default class MintWidget extends React.Component<Props, State> {
                 >
                   Mint
                   <ArrowRightAltIcon
-                    sx={{
-                      color: '#ffff',
-                      fontSize: 28,
-                      marginBottom: '-1px',
-                      marginLeft: '5px',
-                    }}
-                  />
+              sx={{
+                color: '#ffff',
+                fontSize: 28,
+                marginBottom: '-1px',
+                marginLeft: '5px',
+              }}
+            />
                 </button>
               </div>
             </div>

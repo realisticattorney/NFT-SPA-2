@@ -32,7 +32,7 @@ const Dapp = () => {
     authenticate,
     user,
     logout,
-    Moralis,
+    Moralis
   } = useMoralis();
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
@@ -66,7 +66,7 @@ const Dapp = () => {
       provider: 'web3Auth',
       clientId:
         'BD2w7iKElOcRdqglNobGn6bGPXh-JfNg3tPE7jNRmA1m4EB7KF3qDS_DOgGUwoidVMjWFyuzTncIdGntiotSkLM',
-      chainId: '0x4',
+      chainId: Moralis.Chains.ETH_RINKBEY,
     });
   };
 

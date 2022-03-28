@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
-import Image from 'next/image';
 import { ethers, BigNumber } from 'ethers';
 import { ExternalProvider, Web3Provider } from '@ethersproject/providers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -9,13 +8,11 @@ import NetworkConfigInterface from '../../smart-contract/lib/NetworkConfigInterf
 import CollectionStatus from './CollectionStatus';
 import MintWidget from './MintWidget';
 import Whitelist from '../lib/Whitelist';
-import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-// import Logo from '../public/images/Web3Auth.svg';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useWeb3 } from './providers/web3';
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
-// import Moralis from 'moralis';
+import Moralis from 'moralis';
 const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   CollectionConfig.contractName +
   '.sol/' +
@@ -25,15 +22,7 @@ const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
 const Dapp = () => {
   const { contract, provider, chainId } = useWeb3();
   const Web3Api = useMoralisWeb3Api();
-  const {
-    isAuthenticated,
-    isAuthenticating,
-    authError,
-    authenticate,
-    user,
-    logout,
-    Moralis,
-  } = useMoralis();
+  const { isAuthenticated, authenticate, user, logout } = useMoralis();
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
   const [maxMintAmountPerTx, setMaxMintAmountPerTx] = useState(0);
@@ -57,23 +46,13 @@ const Dapp = () => {
     contract && loadProvider();
   }, [contract]);
 
-  // const switchNetworkCallback = useCallback(async () => {
-  //   await Moralis.switchNetwork('0x4');
-  // }, []);
+  const switchNetworkCallback = useCallback(async () => {
+    await Moralis.switchNetwork('0x4');
+  }, []);
 
-  const authenticateCallback = async () => {
-    await authenticate({
-      provider: 'web3Auth',
-      clientId:
-        'BD2w7iKElOcRdqglNobGn6bGPXh-JfNg3tPE7jNRmA1m4EB7KF3qDS_DOgGUwoidVMjWFyuzTncIdGntiotSkLM',
-      chainId: '0x4',
-    });
-  };
-
-  const logoutCallback = useCallback(async () => {
-    await logout();
-    window.location.reload();
-  }, [logout]);
+  const authenticateCallback = useCallback(async () => {
+    await authenticate();
+  }, [authenticate]);
 
   // const [contract, setContract] = React.useState<NftContractType | null>(null);
   // console.log('contract', contract);
@@ -346,14 +325,14 @@ const Dapp = () => {
           <>
             {contract !== undefined ? (
               <>
-                <button
-                  className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+              <button
+                className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
-                  disabled={provider === undefined}
-                  onClick={logoutCallback}
-                >
-                  Log out
-                </button>
+                disabled={provider === undefined}
+                onClick={authenticateCallback}
+              >
+                Connect Wallet
+              </button>
                 <CollectionStatus
                   userAddress={user.get('ethAddress')}
                   maxSupply={maxSupply}
@@ -419,37 +398,7 @@ const Dapp = () => {
         ) : null}
 
         {!user || !isSoldOut() ? (
-          <div className={styles.card}>
-            <Image
-              className={styles.img}
-              src="/images/Web3Auth.svg"
-              width={80}
-              height={80}
-            />
-            {isAuthenticating && <p className={styles.green}>Authenticating</p>}
-            {authError && (
-              <p className={styles.error}>
-                {JSON.stringify(authError.message)}
-              </p>
-            )}
-            <div className={styles.buttonCard}>
-              <button
-                className={styles.loginButton}
-                onClick={authenticateCallback}
-              >
-                Login with Web3Auth
-              </button>
-            </div>
-          </div>
-        ) : null}
-      </div>
-    </div>
-  );
-};
-
-export default Dapp;
-{
-  /* <div className="borderGradient w-min mt-4">
+          <div className="borderGradient w-min mt-4">
             {!user ? (
               <button
                 className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
@@ -468,5 +417,11 @@ export default Dapp;
                 />
               </button>
             ) : null}
-          </div> */
-}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+};
+
+export default Dapp;

@@ -29,7 +29,7 @@ const Dapp = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [tokenPrice, setTokenPrice] = useState(0);
   const [isWhitelistMintEnabled, setIsWhitelistMintEnabled] = useState(false);
-  const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
+  const [isUserInWhitelist, setIsUserInWhitelisted] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
   console.log('contract,', contract);

@@ -28,8 +28,9 @@ const Dapp = () => {
   const [maxMintAmountPerTx, setMaxMintAmountPerTx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [tokenPrice, setTokenPrice] = useState(0);
+  const [isWhitelisted, setIsWhitelisted] = useState(false);
   const [isWhitelistMintEnabled, setIsWhitelistMintEnabled] = useState(false);
-  const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
+  const [isUserWhitelisted, setIsUserWhitelisted] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
   console.log('contract,', contract);

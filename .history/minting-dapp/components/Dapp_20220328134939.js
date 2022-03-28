@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { ethers, BigNumber } from 'ethers';
 import { ExternalProvider, Web3Provider } from '@ethersproject/providers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -20,21 +20,25 @@ const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   '.json').abi;
 
 const Dapp = () => {
-  const { contract, provider, chainId } = useWeb3();
+  const {  provider, chainId } = useWeb3();
   const Web3Api = useMoralisWeb3Api();
   const { isAuthenticated, authenticate, user, logout } = useMoralis();
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
   const [maxMintAmountPerTx, setMaxMintAmountPerTx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [tokenPrice, setTokenPrice] = useState(0);
-  const [isWhitelistMintEnabled, setIsWhitelistMintEnabled] = useState(false);
-  const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
+  const [isWhitelisted, setIsWhitelisted] = useState(false);
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-  console.log('contract,', contract);
+console.log("contract,", contract);
   useEffect(() => {
     const loadProvider = async () => {
+      contract = new ethers.Contract(
+        CollectionConfig.contractAddress,
+        ContractAbi,
+        provider?.getSigner()
+      );
+
       setMaxSupply((await contract?.maxSupply()).toNumber());
       setTotalSupply((await contract?.totalSupply()).toNumber());
       setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
@@ -313,13 +317,13 @@ const Dapp = () => {
             </span>
           </div>
         ) : null} */}
-        {/* 
+
         {errorMessage ? (
           <div className="error">
             <p>{errorMessage}</p>
-            {/* <button onClick={() => setError()} className="font-sans2 font-bold mb-2">Click to close message</button>
+            {/* <button onClick={() => setError()} className="font-sans2 font-bold mb-2">Click to close message</button> */}
           </div>
-        ) : null} */}
+        ) : null}
 
         {user ? (
           <>
@@ -389,9 +393,9 @@ const Dapp = () => {
           </>
         ) : null}
 
-        {!user || !isSoldOut() ? (
+        {!userAddress || !isSoldOut() ? (
           <div className="borderGradient w-min mt-4">
-            {!user ? (
+            {!userAddress ? (
               <button
                 className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"

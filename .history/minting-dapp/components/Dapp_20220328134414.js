@@ -30,7 +30,7 @@ const Dapp = () => {
   const [isWhitelisted, setIsWhitelisted] = useState(false);
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-console.log("contract,", contract);
+
   useEffect(() => {
     const loadProvider = async () => {
       setMaxSupply((await contract?.maxSupply()).toNumber());
@@ -38,7 +38,7 @@ console.log("contract,", contract);
       setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
       setTokenPrice(await contract?.cost());
       setIsPaused(await contract?.paused());
-      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
+      setIsWhitelistMintEnabled(await contract.whitelistMintEnabled());
       setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
     };
     contract && loadProvider();

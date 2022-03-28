@@ -28,29 +28,30 @@ const Dapp = () => {
   const [maxMintAmountPerTx, setMaxMintAmountPerTx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isWhitelisted, setIsWhitelisted] = useState(false);
-  const [network, setNetwork] = useState(null);
-  const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-console.log("contract,", contract);
-  useEffect(() => {
-    const loadProvider = async () => {
-      setMaxSupply((await contract?.maxSupply()).toNumber());
-      setTotalSupply((await contract?.totalSupply()).toNumber());
-      setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
-      setTokenPrice(await contract?.cost());
-      setIsPaused(await contract?.paused());
-      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
-      setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
-    };
-    contract && loadProvider();
-  }, [contract]);
+  
 
-  const switchNetworkCallback = useCallback(async () => {
-    await Moralis.switchNetwork('0x4');
-  }, []);
+useEffect(() => {
+  const loadProvider = async () => {
+    setMaxSupply((await contract.maxSupply()).toNumber());
+    setTotalSupply((await contract.totalSupply()).toNumber());
+    setMaxMintAmountPerTx((await contract.maxMintAmountPerTx()).toNumber());
+    setTokenPrice(await contract.cost());
+    setIsPaused(await contract.paused());
+    setIsWhitelistMintEnabled(await contract.whitelistMintEnabled());
+    // setIsUserInWhitelist(Whitelist.contains(userAddress ?? ''));
+  }
+  contract && loadProvider();
+}, [contract]);
 
-  const authenticateCallback = useCallback(async () => {
-    await authenticate();
-  }, [authenticate]);
+
+
+
+
+
+
+
+
+
 
   // const [contract, setContract] = React.useState<NftContractType | null>(null);
   // console.log('contract', contract);
@@ -107,33 +108,35 @@ console.log("contract,", contract);
   //   getEthAccountBalance();
   // }, []);
 
-  const mintTokens = async (amount) => {
-    try {
-      await contract?.mint(amount, { value: tokenPrice.mul(amount) });
-    } catch (e) {
-      setError(e);
-    }
-  };
+  // const mintTokens = async (amount: number): Promise<void> => {
+  //   try {
+  //     await contract?.mint(amount, { value: tokenPrice.mul(amount) });
+  //   } catch (e) {
+  //     setError(e);
+  //   }
+  // };
 
-  const whitelistMintTokens = async (amount) => {
-    try {
-      await contract?.whitelistMint(
-        amount,
-        Whitelist.getProofForAddress(user.get('ethAddress')),
-        { value: tokenPrice.mul(amount) }
-      );
-    } catch (e) {
-      setError(e);
-    }
-  };
+  // const whitelistMintTokens = async (amount: number): Promise<void> => {
+  //   try {
+  //     await contract?.whitelistMint(
+  //       amount,
+  //       Whitelist.getProofForAddress(userAddress!),
+  //       { value: tokenPrice.mul(amount) }
+  //     );
+  //   } catch (e) {
+  //     setError(e);
+  //   }
+  // };
 
-  const isSoldOut = () => {
-    return maxSupply !== 0 && totalSupply < maxSupply;
-  };
+  // const isSoldOut = (): boolean => {
+  //   return maxSupply !== 0 && totalSupply < maxSupply;
+  // };
 
-  const isNotMainnet = () => {
-    return chainId !== null && chainId !== CollectionConfig.mainnet.chainId;
-  };
+  // const isNotMainnet = (): boolean => {
+  //   return (
+  //     network !== null && network.chainId !== CollectionConfig.mainnet.chainId
+  //   );
+  // };
 
   // const copyMerkleProofToClipboard = (): void => {
   //   const merkleProof = Whitelist.getRawProofForAddress(
@@ -196,12 +199,12 @@ console.log("contract,", contract);
   //   );
   // };
 
-  const generateMarketplaceUrl = () => {
-    return CollectionConfig.marketplaceConfig.generateCollectionUrl(
-      CollectionConfig.marketplaceIdentifier,
-      !isNotMainnet()
-    );
-  };
+  // const generateMarketplaceUrl = (): string => {
+  //   return CollectionConfig.marketplaceConfig.generateCollectionUrl(
+  //     CollectionConfig.marketplaceIdentifier,
+  //     !isNotMainnet()
+  //   );
+  // };
 
   // const connectWallet = async (): Promise<void> => {
   //   try {

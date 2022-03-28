@@ -28,18 +28,16 @@ const Dapp = () => {
   const [maxMintAmountPerTx, setMaxMintAmountPerTx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isWhitelisted, setIsWhitelisted] = useState(false);
-  const [network, setNetwork] = useState(null);
-  const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-console.log("contract,", contract);
+
   useEffect(() => {
     const loadProvider = async () => {
-      setMaxSupply((await contract?.maxSupply()).toNumber());
-      setTotalSupply((await contract?.totalSupply()).toNumber());
-      setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
-      setTokenPrice(await contract?.cost());
-      setIsPaused(await contract?.paused());
-      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
-      setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
+      setMaxSupply((await contract.maxSupply()).toNumber());
+      setTotalSupply((await contract.totalSupply()).toNumber());
+      setMaxMintAmountPerTx((await contract.maxMintAmountPerTx()).toNumber());
+      setTokenPrice(await contract.cost());
+      setIsPaused(await contract.paused());
+      setIsWhitelistMintEnabled(await contract.whitelistMintEnabled());
+      // setIsUserInWhitelist(Whitelist.contains(userAddress ?? ''));
     };
     contract && loadProvider();
   }, [contract]);
@@ -119,7 +117,7 @@ console.log("contract,", contract);
     try {
       await contract?.whitelistMint(
         amount,
-        Whitelist.getProofForAddress(user.get('ethAddress')),
+        Whitelist.getProofForAddress(userAddress!),
         { value: tokenPrice.mul(amount) }
       );
     } catch (e) {
@@ -132,7 +130,9 @@ console.log("contract,", contract);
   };
 
   const isNotMainnet = () => {
-    return chainId !== null && chainId !== CollectionConfig.mainnet.chainId;
+    return (
+      network !== null && network.chainId !== CollectionConfig.mainnet.chainId
+    );
   };
 
   // const copyMerkleProofToClipboard = (): void => {

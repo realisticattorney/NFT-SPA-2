@@ -39,10 +39,9 @@ export default function Web3Provider({ children }) {
         provider = await Moralis.enableWeb3();
         chainId = Moralis.chainId;
         contract = new ethers.Contract(
-          CollectionConfig.contractAddress,
-          ContractAbi,
-          provider?.getSigner()
-        );
+            CollectionConfig.contractAddress,
+            ContractAbi,
+            provider?.getSigner())
       }
       if (!window.ethereum || chainId !== '0x4') {
         const url = `https://eth-rinkeby.alchemyapi.io/v2/${API_KEY}`;
@@ -50,15 +49,14 @@ export default function Web3Provider({ children }) {
         contract = new ethers.Contract(
           CollectionConfig.contractAddress,
           ContractAbi,
-          provider
-        );
+          provider)
       }
-      if (provider) {
-        //   const registry = new ethers.Contract(
-        //     registryAddress,
-        //     Registry.abi,
-        //     provider
-        //   );
+      // if (provider) {
+      //   const registry = new ethers.Contract(
+      //     registryAddress,
+      //     Registry.abi,
+      //     provider
+      //   );
 
         // const exchangeBalance = ethers.utils.formatEther(
         //   await provider.getBalance(exchangeBunny.address)
@@ -75,19 +73,19 @@ export default function Web3Provider({ children }) {
           chainId,
           // slippage: 0.5,
           // txSpeed: 5,
-          // accountERC20Balance: 0,
-          // exchangeBunny: {
-          // balance: exchangeBalance,
-          // reserve: getReserve,
-          // totalSupply,
-          contract,
-          // },
-          // exchangeCurrent: {
-          //   balance: exchangeBalance,
-          //   reserve: getReserve,
-          //   totalSupply,
-          //   contract: exchangeBunny,
-          // }
+          accountERC20Balance: 0,
+          exchangeBunny: {
+            balance: exchangeBalance,
+            reserve: getReserve,
+            totalSupply,
+            contract: exchangeBunny,
+          },
+          exchangeCurrent: {
+            balance: exchangeBalance,
+            reserve: getReserve,
+            totalSupply,
+            contract: exchangeBunny,
+          },
         });
       } else {
         setWeb3Api((api) => ({ ...api, isLoading: false }));
@@ -107,12 +105,12 @@ export default function Web3Provider({ children }) {
           accountERC20Balance: tokenBalance,
         }));
       },
-      // setSlippage: (slippage) => {
-      //   setWeb3Api((api) => ({ ...api, slippage }));
-      // },
-      // setTxSpeed: (txSpeed) => {
-      //   setWeb3Api((api) => ({ ...api, txSpeed }));
-      // },
+      setSlippage: (slippage) => {
+        setWeb3Api((api) => ({ ...api, slippage }));
+      },
+      setTxSpeed: (txSpeed) => {
+        setWeb3Api((api) => ({ ...api, txSpeed }));
+      },
       setExchangeCurrent: async (exchange) => {
         let newExchangeAddress = await web3Api.registry
           .getExchange(exchange)

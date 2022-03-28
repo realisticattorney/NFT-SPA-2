@@ -34,60 +34,54 @@ export default function Web3Provider({ children }) {
     const loadProvider = async () => {
       let provider;
       let chainId;
-      let contract;
       if (window.ethereum) {
         provider = await Moralis.enableWeb3();
         chainId = Moralis.chainId;
-        contract = new ethers.Contract(
-          CollectionConfig.contractAddress,
-          ContractAbi,
-          provider?.getSigner()
-        );
       }
       if (!window.ethereum || chainId !== '0x4') {
         const url = `https://eth-rinkeby.alchemyapi.io/v2/${API_KEY}`;
         provider = new ethers.providers.JsonRpcProvider(url);
-        contract = new ethers.Contract(
-          CollectionConfig.contractAddress,
-          ContractAbi,
-          provider
-        );
       }
       if (provider) {
-        //   const registry = new ethers.Contract(
-        //     registryAddress,
-        //     Registry.abi,
-        //     provider
-        //   );
+        const registry = new ethers.Contract(
+          registryAddress,
+          Registry.abi,
+          provider
+        );
 
-        // const exchangeBalance = ethers.utils.formatEther(
-        //   await provider.getBalance(exchangeBunny.address)
-        // );
-        // const getReserve = ethers.utils.formatEther(
-        //   await exchangeBunny.getReserve()
-        // );
-        // const totalSupply = ethers.utils.formatEther(
-        //   await exchangeBunny.totalSupply()
-        // );
+        const exchangeBunny = new ethers.Contract(
+          scammExchangeAddress,
+          Exchange.abi,
+          provider
+        );
+        const exchangeBalance = ethers.utils.formatEther(
+          await provider.getBalance(exchangeBunny.address)
+        );
+        const getReserve = ethers.utils.formatEther(
+          await exchangeBunny.getReserve()
+        );
+        const totalSupply = ethers.utils.formatEther(
+          await exchangeBunny.totalSupply()
+        );
         setWeb3Api({
           provider,
-          // registry,
+          registry,
           chainId,
-          // slippage: 0.5,
-          // txSpeed: 5,
-          // accountERC20Balance: 0,
-          // exchangeBunny: {
-          // balance: exchangeBalance,
-          // reserve: getReserve,
-          // totalSupply,
-          contract,
-          // },
-          // exchangeCurrent: {
-          //   balance: exchangeBalance,
-          //   reserve: getReserve,
-          //   totalSupply,
-          //   contract: exchangeBunny,
-          // }
+          slippage: 0.5,
+          txSpeed: 5,
+          accountERC20Balance: 0,
+          exchangeBunny: {
+            balance: exchangeBalance,
+            reserve: getReserve,
+            totalSupply,
+            contract: exchangeBunny,
+          },
+          exchangeCurrent: {
+            balance: exchangeBalance,
+            reserve: getReserve,
+            totalSupply,
+            contract: exchangeBunny,
+          },
         });
       } else {
         setWeb3Api((api) => ({ ...api, isLoading: false }));
@@ -107,12 +101,12 @@ export default function Web3Provider({ children }) {
           accountERC20Balance: tokenBalance,
         }));
       },
-      // setSlippage: (slippage) => {
-      //   setWeb3Api((api) => ({ ...api, slippage }));
-      // },
-      // setTxSpeed: (txSpeed) => {
-      //   setWeb3Api((api) => ({ ...api, txSpeed }));
-      // },
+      setSlippage: (slippage) => {
+        setWeb3Api((api) => ({ ...api, slippage }));
+      },
+      setTxSpeed: (txSpeed) => {
+        setWeb3Api((api) => ({ ...api, txSpeed }));
+      },
       setExchangeCurrent: async (exchange) => {
         let newExchangeAddress = await web3Api.registry
           .getExchange(exchange)

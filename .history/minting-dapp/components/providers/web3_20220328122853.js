@@ -107,12 +107,12 @@ export default function Web3Provider({ children }) {
           accountERC20Balance: tokenBalance,
         }));
       },
-      // setSlippage: (slippage) => {
-      //   setWeb3Api((api) => ({ ...api, slippage }));
-      // },
-      // setTxSpeed: (txSpeed) => {
-      //   setWeb3Api((api) => ({ ...api, txSpeed }));
-      // },
+      setSlippage: (slippage) => {
+        setWeb3Api((api) => ({ ...api, slippage }));
+      },
+      setTxSpeed: (txSpeed) => {
+        setWeb3Api((api) => ({ ...api, txSpeed }));
+      },
       setExchangeCurrent: async (exchange) => {
         let newExchangeAddress = await web3Api.registry
           .getExchange(exchange)

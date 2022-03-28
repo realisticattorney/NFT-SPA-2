@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../minting-dapp/src/scripts/react/CollectionStatus.tsx", "pages/_app.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../minting-dapp/src/scripts/react/CollectionStatus.tsx"],
   "exclude": ["node_modules"]
 }

@@ -23,7 +23,7 @@ const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   '.json').abi;
 
 const Dapp = () => {
-  // const { contract, provider, chainId } = useWeb3();
+  const { contract, provider, chainId } = useWeb3();
   const Web3Api = useMoralisWeb3Api();
   const {
     isAuthenticated,
@@ -43,6 +43,7 @@ const Dapp = () => {
   const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
+  console.log('contract,', contract);
   // useEffect(() => {
   //   const loadProvider = async () => {
   //     setMaxSupply((await contract?.maxSupply()).toNumber());

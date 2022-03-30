@@ -9,7 +9,7 @@ import NetworkConfigInterface from '../../smart-contract/lib/NetworkConfigInterf
 import CollectionStatus from './CollectionStatus';
 import MintWidget from './MintWidget';
 import Whitelist from '../lib/Whitelist';
-import styles from '../styles/Home.module.css';
+// import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 // import Logo from '../public/images/Web3Auth.svg';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';

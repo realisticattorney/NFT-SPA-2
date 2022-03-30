@@ -23,7 +23,7 @@ const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
   '.json').abi;
 
 const Dapp = () => {
-  // const { contract, provider, chainId } = useWeb3();
+  const { contract, provider, chainId } = useWeb3();
   const Web3Api = useMoralisWeb3Api();
   const {
     isAuthenticated,
@@ -43,18 +43,19 @@ const Dapp = () => {
   const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-  // useEffect(() => {
-  //   const loadProvider = async () => {
-  //     setMaxSupply((await contract?.maxSupply()).toNumber());
-  //     setTotalSupply((await contract?.totalSupply()).toNumber());
-  //     setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
-  //     setTokenPrice(await contract?.cost());
-  //     setIsPaused(await contract?.paused());
-  //     setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
-  //     setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
-  //   };
-  //   contract && loadProvider();
-  // }, [contract]);
+  console.log('contract,', contract);
+  useEffect(() => {
+    const loadProvider = async () => {
+      setMaxSupply((await contract?.maxSupply()).toNumber());
+      setTotalSupply((await contract?.totalSupply()).toNumber());
+      setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
+      setTokenPrice(await contract?.cost());
+      setIsPaused(await contract?.paused());
+      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
+      setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
+    };
+    contract && loadProvider();
+  }, [contract]);
 
   // const switchNetworkCallback = useCallback(async () => {
   //   await Moralis.switchNetwork('0x4');

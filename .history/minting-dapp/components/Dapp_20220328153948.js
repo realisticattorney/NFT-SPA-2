@@ -43,6 +43,7 @@ const Dapp = () => {
   const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
+  console.log('contract,', contract);
   // useEffect(() => {
   //   const loadProvider = async () => {
   //     setMaxSupply((await contract?.maxSupply()).toNumber());

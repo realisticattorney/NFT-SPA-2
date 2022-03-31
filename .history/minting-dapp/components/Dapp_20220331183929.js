@@ -68,7 +68,7 @@ const Dapp = () => {
 
   const authenticateCallback = async () => {
     authenticate({
-      provider: 'web3Auth',
+      provider: 'web3Auth', 
       clientId:
         'BD2w7iKElOcRdqglNobGn6bGPXh-JfNg3tPE7jNRmA1m4EB7KF3qDS_DOgGUwoidVMjWFyuzTncIdGntiotSkLM',
       chainId: '0x4',
@@ -117,30 +117,21 @@ const Dapp = () => {
   // }, []);
 
   const mintTokens = async (amount) => {
-    console.log('mintTokens', tokenPrice.mul(amount));
+    console.log("mintTokens",tokenPrice.mul(amount));
     const web3modal = new Web3Modal();
     const connection = await web3modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
     let contractVar = new ethers.Contract(
-      CollectionConfig.contractAddress,
-      ContractAbi,
-      provider?.getSigner()
-    );
+          CollectionConfig.contractAddress,
+          ContractAbi,
+          provider?.getSigner()
+        );
+    console.log("contractVar",contractVar);
+    console.log("provider",provider);
+
     try {
-      transaction = await toast.promise(
-        contractVar.mint(amount, { value: tokenPrice.mul(amount) }),
-        {
-          pending: 'Tx is pending',
-          success: 'Tx sent 👌',
-          error: 'Tx rejected 🤯',
-        }
-      );
-      await toast.promise(transaction.wait(), {
-        pending: 'Mining of tx is pending',
-        success: 'Mining of tx resolved 👌',
-        error: 'Mining of tx rejected 🤯',
-      });
-      setTotalSupply((await contract?.totalSupply()).toNumber());
+
+      await contractVar.mint(amount, { value: tokenPrice.mul(amount) });
     } catch (e) {
       errorHandler(e);
     }
@@ -197,7 +188,7 @@ const Dapp = () => {
 
   const errorHandler = (error = null) => {
     let errorMessagess = 'Unknown error...';
-    console.log('errorrrr', error);
+    console.log("errorrrr",error)
     if (null === error || typeof error === 'string') {
       errorMessagess = error;
     } else if (typeof error === 'object') {

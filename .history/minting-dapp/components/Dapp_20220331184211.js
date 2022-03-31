@@ -135,12 +135,6 @@ const Dapp = () => {
           error: 'Tx rejected 🤯',
         }
       );
-      await toast.promise(transaction.wait(), {
-        pending: 'Mining of tx is pending',
-        success: 'Mining of tx resolved 👌',
-        error: 'Mining of tx rejected 🤯',
-      });
-      setTotalSupply((await contract?.totalSupply()).toNumber());
     } catch (e) {
       errorHandler(e);
     }

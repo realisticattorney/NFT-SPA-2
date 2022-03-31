@@ -141,6 +141,7 @@ const Dapp = () => {
         error: 'Mining of tx rejected 🤯',
       });
       setTotalSupply((await contract?.totalSupply()).toNumber());
+      
     } catch (e) {
       errorHandler(e);
     }

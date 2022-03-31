@@ -77,7 +77,7 @@ const Dapp = () => {
 
   const logoutCallback = useCallback(async () => {
     await logout();
-    // window.location.reload();
+    window.location.reload();
   }, [logout]);
 
   // let merkleProofManualAddressInput!: HTMLInputElement;
@@ -380,6 +380,7 @@ const Dapp = () => {
                     authenticateCallback={authenticateCallback}
                     logoutCallback={logoutCallback}
                   />
+            
                   <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (

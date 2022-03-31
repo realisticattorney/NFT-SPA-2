@@ -88,38 +88,18 @@ const MintWidget = ({
               ETH + Gas Fee
               <h1>Max 5 Demons per trasaction</h1>
             </div>
-          </div>
-          <div className="flex justify-between mt-6 sm:mt-10">
-            <div className="borderGradient w-min ">
-              <button
-                className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
-bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
-                onClick={() => (user ? mint() : authenticateCallback())}
-              >
-                {!user
-                  ? 'Sign in'
-                  : canWhitelistMint()
-                  ? 'Whitelist Mint'
-                  : 'Mint'}
-                <ArrowRightAltIcon
-                  sx={{
-                    color: '#ffff',
-                    fontSize: 28,
-                    marginBottom: '-1px',
-                    marginLeft: '5px',
-                  }}
-                />
-              </button>
-            </div>
-            {user && (
-              <div className="borderGradient w-min">
+            <div className="flex justify-between">
+              <div className="borderGradient w-min mt-6 sm:mt-10">
                 <button
-                  className="w-[172px] py-1 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
-                bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
-                  // disabled={provider === undefined}
-                  onClick={logoutCallback}
+                  className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
+                  onClick={() => (user ? mint() : authenticateCallback())}
                 >
-                  Log out
+                  {user
+                    ? 'Sign in'
+                    : canWhitelistMint()
+                    ? 'Whitelist Mint'
+                    : 'Mint'}
                   <ArrowRightAltIcon
                     sx={{
                       color: '#ffff',
@@ -130,7 +110,8 @@ bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
                   />
                 </button>
               </div>
-            )}
+              
+            </div>
           </div>
         </div>
       ) : (

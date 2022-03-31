@@ -77,7 +77,7 @@ const Dapp = () => {
 
   const logoutCallback = useCallback(async () => {
     await logout();
-    // window.location.reload();
+    window.location.reload();
   }, [logout]);
 
   // let merkleProofManualAddressInput!: HTMLInputElement;
@@ -376,10 +376,17 @@ const Dapp = () => {
                     mintTokens={(mintAmount) => mintTokens(mintAmount)}
                     whitelistMintTokens={(mintAmount) =>
                       whitelistMintTokens(mintAmount)
+                      
                     }
-                    authenticateCallback={authenticateCallback}
-                    logoutCallback={logoutCallback}
                   />
+                  {/* <button
+                    className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
+                    disabled={provider === undefined}
+                    onClick={logoutCallback}
+                  >
+                    Log out
+                  </button> */}
                   <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (

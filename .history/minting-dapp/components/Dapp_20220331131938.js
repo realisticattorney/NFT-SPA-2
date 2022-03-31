@@ -354,29 +354,28 @@ const Dapp = () => {
             </button>
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
-                <>
-                  <CollectionStatus
-                    // userAddress={user.get('ethAddress')}
-                    maxSupply={maxSupply}
-                    totalSupply={totalSupply}
-                    isPaused={isPaused}
-                    isWhitelistMintEnabled={isWhitelistMintEnabled}
-                    isUserInWhitelist={isUserInWhitelist}
-                  />
-                  <MintWidget
-                    maxSupply={maxSupply}
-                    totalSupply={totalSupply}
-                    tokenPrice={tokenPrice}
-                    maxMintAmountPerTx={maxMintAmountPerTx}
-                    isPaused={isPaused}
-                    isWhitelistMintEnabled={isWhitelistMintEnabled}
-                    isUserInWhitelist={isUserInWhitelist}
-                    mintTokens={(mintAmount) => mintTokens(mintAmount)}
-                    whitelistMintTokens={(mintAmount) =>
-                      whitelistMintTokens(mintAmount)
-                    }
-                  />
-                </>
+  <>              
+            <CollectionStatus
+              // userAddress={user.get('ethAddress')}
+              maxSupply={maxSupply}
+              totalSupply={totalSupply}
+              isPaused={isPaused}
+              isWhitelistMintEnabled={isWhitelistMintEnabled}
+              isUserInWhitelist={isUserInWhitelist}
+            />
+                <MintWidget
+                  maxSupply={maxSupply}
+                  totalSupply={totalSupply}
+                  tokenPrice={tokenPrice}
+                  maxMintAmountPerTx={maxMintAmountPerTx}
+                  isPaused={isPaused}
+                  isWhitelistMintEnabled={isWhitelistMintEnabled}
+                  isUserInWhitelist={isUserInWhitelist}
+                  mintTokens={(mintAmount) => mintTokens(mintAmount)}
+                  whitelistMintTokens={(mintAmount) =>
+                    whitelistMintTokens(mintAmount)
+                  }
+                />
               ) : (
                 <div className="collection-sold-out">
                   <h2>

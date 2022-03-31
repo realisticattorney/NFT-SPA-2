@@ -352,44 +352,41 @@ const Dapp = () => {
             >
               Log out
             </button>
-            {maxSupply > 0 &&
-              (totalSupply < maxSupply ? (
-                <>
-                  <CollectionStatus
-                    // userAddress={user.get('ethAddress')}
-                    maxSupply={maxSupply}
-                    totalSupply={totalSupply}
-                    isPaused={isPaused}
-                    isWhitelistMintEnabled={isWhitelistMintEnabled}
-                    isUserInWhitelist={isUserInWhitelist}
-                  />
-                  <MintWidget
-                    maxSupply={maxSupply}
-                    totalSupply={totalSupply}
-                    tokenPrice={tokenPrice}
-                    maxMintAmountPerTx={maxMintAmountPerTx}
-                    isPaused={isPaused}
-                    isWhitelistMintEnabled={isWhitelistMintEnabled}
-                    isUserInWhitelist={isUserInWhitelist}
-                    mintTokens={(mintAmount) => mintTokens(mintAmount)}
-                    whitelistMintTokens={(mintAmount) =>
-                      whitelistMintTokens(mintAmount)
-                    }
-                  />
-                </>
-              ) : (
-                <div className="collection-sold-out">
-                  <h2>
-                    Tokens have been <strong>sold out</strong>!{' '}
-                    <span className="emoji">🥳</span>
-                  </h2>
-                  You can buy from our beloved holders on{' '}
-                  <Link href={generateMarketplaceUrl()}>
-                    {CollectionConfig.marketplaceConfig.name}
-                  </Link>
-                  .
-                </div>
-              ))}
+            <CollectionStatus
+              // userAddress={user.get('ethAddress')}
+              maxSupply={maxSupply}
+              totalSupply={totalSupply}
+              isPaused={isPaused}
+              isWhitelistMintEnabled={isWhitelistMintEnabled}
+              isUserInWhitelist={isUserInWhitelist}
+            />
+            {totalSupply && totalSupply < maxSupply ? (
+              <MintWidget
+                maxSupply={maxSupply}
+                totalSupply={totalSupply}
+                tokenPrice={tokenPrice}
+                maxMintAmountPerTx={maxMintAmountPerTx}
+                isPaused={isPaused}
+                isWhitelistMintEnabled={isWhitelistMintEnabled}
+                isUserInWhitelist={isUserInWhitelist}
+                mintTokens={(mintAmount) => mintTokens(mintAmount)}
+                whitelistMintTokens={(mintAmount) =>
+                  whitelistMintTokens(mintAmount)
+                }
+              />
+            ) : (
+              <div className="collection-sold-out">
+                <h2>
+                  Tokens have been <strong>sold out</strong>!{' '}
+                  <span className="emoji">🥳</span>
+                </h2>
+                You can buy from our beloved holders on{' '}
+                <Link href={generateMarketplaceUrl()}>
+                  {CollectionConfig.marketplaceConfig.name}
+                </Link>
+                .
+              </div>
+            )}
           </>
         ) : (
           <div className="collection-not-ready">

@@ -451,8 +451,8 @@ const Dapp = () => {
             )}
           </div>
         ) : null}
-      </div>
         <ToastContainer />
+      </div>
     </div>
   );
 };

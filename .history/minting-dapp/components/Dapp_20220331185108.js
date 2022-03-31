@@ -121,12 +121,12 @@ const Dapp = () => {
     const web3modal = new Web3Modal();
     const connection = await web3modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
+    let 
     let contractVar = new ethers.Contract(
       CollectionConfig.contractAddress,
       ContractAbi,
       provider?.getSigner()
     );
-    let transaction;
     try {
       transaction = await toast.promise(
         contractVar.mint(amount, { value: tokenPrice.mul(amount) }),
@@ -452,7 +452,6 @@ const Dapp = () => {
           </div>
         ) : null}
       </div>
-        <ToastContainer />
     </div>
   );
 };

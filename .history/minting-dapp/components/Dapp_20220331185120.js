@@ -126,8 +126,8 @@ const Dapp = () => {
       ContractAbi,
       provider?.getSigner()
     );
-    let transaction;
     try {
+      let transaction;
       transaction = await toast.promise(
         contractVar.mint(amount, { value: tokenPrice.mul(amount) }),
         {
@@ -452,7 +452,6 @@ const Dapp = () => {
           </div>
         ) : null}
       </div>
-        <ToastContainer />
     </div>
   );
 };

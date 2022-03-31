@@ -376,7 +376,7 @@ const Dapp = () => {
                       whitelistMintTokens(mintAmount)
                     }
                   />
-                  <p>{user?.get('ethAddress')}</p>
+                  paste
                 </>
               ) : (
                 <div className="collection-sold-out">

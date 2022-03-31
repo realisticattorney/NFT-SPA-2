@@ -376,7 +376,6 @@ const Dapp = () => {
                       whitelistMintTokens(mintAmount)
                     }
                   />
-                  <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (
                 <div className="collection-sold-out">
@@ -426,7 +425,7 @@ const Dapp = () => {
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
                 disabled={provider === undefined}
                 onClick={() =>
-                  !user ? authenticateCallback() : logoutCallback()
+                  !user ? authenticateCallback() : loginCallback()
                 }
               >
                 {!user ? 'Sign in' : 'Log out'}

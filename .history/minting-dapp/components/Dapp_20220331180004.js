@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
-import Web3Modal from 'web3modal';
 import { ethers, BigNumber } from 'ethers';
 import { ExternalProvider, Web3Provider } from '@ethersproject/providers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -45,8 +44,6 @@ const Dapp = () => {
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
   console.log('address', user?.get('ethAddress'));
-  const [errorMessage, setErrorMessage] = useState('');
-
   useEffect(() => {
     const loadProvider = async () => {
       setMaxSupply((await contract?.maxSupply()).toNumber());
@@ -66,7 +63,7 @@ const Dapp = () => {
 
   const authenticateCallback = async () => {
     authenticate({
-      provider: 'web3Auth', 
+      provider: 'web3Auth',
       clientId:
         'BD2w7iKElOcRdqglNobGn6bGPXh-JfNg3tPE7jNRmA1m4EB7KF3qDS_DOgGUwoidVMjWFyuzTncIdGntiotSkLM',
       chainId: '0x4',
@@ -80,7 +77,23 @@ const Dapp = () => {
 
   // let merkleProofManualAddressInput!: HTMLInputElement;
 
+  // const [userAddress, setUserAddress] = React.useState<string | null>(null);
+  // const [network, setNetwork] = React.useState<ethers.providers.Network | null>(
+  //   null
+  // );
+  // const [networkConfig, setNetworkConfig] =
+  //   React.useState<NetworkConfigInterface>(CollectionConfig.mainnet);
+  // const [totalSupply, setTotalSupply] = React.useState<number>(0);
+  // const [maxSupply, setMaxSupply] = React.useState<number>(0);
   // const [maxMintAmountPerTx, setMaxMintAmountPerTx] = React.useState<number>(0);
+  // const [tokenPrice, setTokenPrice] = React.useState<BigNumber>(
+  //   BigNumber.from(0)
+  // );
+  // const [isPaused, setIsPaused] = React.useState<boolean>(true);
+  // const [isWhitelistMintEnabled, setIsWhitelistMintEnabled] =
+  //   React.useState<boolean>(false);
+  // const [isUserInWhitelist, setIsUserInWhitelist] =
+  //   React.useState<boolean>(false);
   // const [merkleProofManualAddress, setMerkleProofManualAddress] =
   //   React.useState<string>('');
   // const [
@@ -115,23 +128,10 @@ const Dapp = () => {
   // }, []);
 
   const mintTokens = async (amount) => {
-    console.log("mintTokens",tokenPrice.mul(amount));
-    const web3modal = new Web3Modal();
-    const connection = await web3modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
-    let contractVar = new ethers.Contract(
-          CollectionConfig.contractAddress,
-          ContractAbi,
-          provider?.getSigner()
-        );
-    console.log("contractVar",contractVar);
-    console.log("provider",provider);
-
     try {
-
-      await contractVar.mint(amount, { value: tokenPrice.mul(amount) });
+      await contract?.mint(amount, { value: tokenPrice.mul(amount) });
     } catch (e) {
-      errorHandler(e);
+      setError(e);
     }
   };
 
@@ -143,7 +143,7 @@ const Dapp = () => {
         { value: tokenPrice.mul(amount) }
       );
     } catch (e) {
-      errorHandler(e);
+      setError(e);
     }
   };
 
@@ -184,31 +184,31 @@ const Dapp = () => {
   //   );
   // };
 
-  const errorHandler = (error = null) => {
-    let errorMessagess = 'Unknown error...';
-    console.log("errorrrr",error)
-    if (null === error || typeof error === 'string') {
-      errorMessagess = error;
-    } else if (typeof error === 'object') {
-      // Support any type of error from the Web3 Provider...
-      if (error?.error?.message !== undefined) {
-        errorMessagess = error.error.message;
-      } else if (error?.data?.message !== undefined) {
-        errorMessagess = error.data.message;
-      } else if (error?.message !== undefined) {
-        errorMessagess = error.message;
-      } else if (React.isValidElement(error)) {
-        setErrorMessage(error);
+  // const setError = (error: any = null): void => {
+  //   let errorMessagess = 'Unknown error...';
 
-        return;
-      }
-    }
-    setErrorMessage(
-      null === errorMessage
-        ? null
-        : errorMessage.charAt(0).toUpperCase() + errorMessage.slice(1)
-    );
-  };
+  //   if (null === error || typeof error === 'string') {
+  //     errorMessagess = error;
+  //   } else if (typeof error === 'object') {
+  //     // Support any type of error from the Web3 Provider...
+  //     if (error?.error?.message !== undefined) {
+  //       errorMessagess = error.error.message;
+  //     } else if (error?.data?.message !== undefined) {
+  //       errorMessagess = error.data.message;
+  //     } else if (error?.message !== undefined) {
+  //       errorMessagess = error.message;
+  //     } else if (React.isValidElement(error)) {
+  //       setErrorMessage(error);
+
+  //       return;
+  //     }
+  //   }
+  //   setErrorMessage(
+  //     null === errorMessage
+  //       ? null
+  //       : errorMessage.charAt(0).toUpperCase() + errorMessage.slice(1)
+  //   );
+  // };
 
   // const generateContractUrl = (): string => {
   //   return networkConfig.blockExplorer.generateContractUrl(
@@ -341,6 +341,14 @@ const Dapp = () => {
 
         {contract !== undefined ? (
           <>
+            {/* <button
+              className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
+              disabled={provider === undefined}
+              onClick={logoutCallback}
+            >
+              Log out
+            </button> */}
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
                 <>
@@ -356,7 +364,6 @@ const Dapp = () => {
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}
                     tokenPrice={tokenPrice}
-                    user={user}
                     maxMintAmountPerTx={maxMintAmountPerTx}
                     isPaused={isPaused}
                     isWhitelistMintEnabled={isWhitelistMintEnabled}
@@ -366,14 +373,6 @@ const Dapp = () => {
                       whitelistMintTokens(mintAmount)
                     }
                   />
-                  <button
-                    className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
-                bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
-                    disabled={provider === undefined}
-                    onClick={logoutCallback}
-                  >
-                    Log out
-                  </button>
                   <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (

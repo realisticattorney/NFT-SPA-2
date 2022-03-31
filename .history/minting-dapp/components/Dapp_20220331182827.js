@@ -129,7 +129,7 @@ const Dapp = () => {
 
     try {
 
-      await contractVar.mint(amount, { value: tokenPrice.mul(amount) });
+      await contract?.mint(amount, { value: tokenPrice.mul(amount) });
     } catch (e) {
       errorHandler(e);
     }

@@ -1,12 +1,10 @@
 import { utils, BigNumber } from 'ethers';
 import React from 'react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import Moralis from 'moralis/types';
 interface Props {
   maxSupply: number;
   totalSupply: number;
   tokenPrice: BigNumber;
-  user: Moralis.User<Moralis.Attributes> | null;
   maxMintAmountPerTx: number;
   isPaused: boolean;
   isWhitelistMintEnabled: boolean;
@@ -108,25 +106,24 @@ export default class MintWidget extends React.Component<Props, State> {
                 ETH + Gas Fee
                 <h1>Max 5 Demons per trasaction</h1>
               </div>
-              {this.props.user && (
-                <div className="borderGradient w-min mt-6 sm:mt-10">
-                  <button
-                    className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
-bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
-                    onClick={() => this.mint()}
-                  >
-                    Mint
-                    <ArrowRightAltIcon
-                      sx={{
-                        color: '#ffff',
-                        fontSize: 28,
-                        marginBottom: '-1px',
-                        marginLeft: '5px',
-                      }}
-                    />
-                  </button>
-                </div>
-              )}
+              
+              <div className="borderGradient w-min mt-6 sm:mt-10">
+                <button
+                  className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+               bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
+                  onClick={() => this.mint()}
+                >
+                  Mint
+                  <ArrowRightAltIcon
+                    sx={{
+                      color: '#ffff',
+                      fontSize: 28,
+                      marginBottom: '-1px',
+                      marginLeft: '5px',
+                    }}
+                  />
+                </button>
+              </div>
             </div>
           </div>
         ) : (

@@ -108,25 +108,28 @@ export default class MintWidget extends React.Component<Props, State> {
                 ETH + Gas Fee
                 <h1>Max 5 Demons per trasaction</h1>
               </div>
-              {this.props.user && (
-                <div className="borderGradient w-min mt-6 sm:mt-10">
-                  <button
-                    className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
-bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
-                    onClick={() => this.mint()}
-                  >
-                    Mint
-                    <ArrowRightAltIcon
-                      sx={{
-                        color: '#ffff',
-                        fontSize: 28,
-                        marginBottom: '-1px',
-                        marginLeft: '5px',
-                      }}
-                    />
-                  </button>
-                </div>
-              )}
+{user && (
+
+
+
+)}
+              <div className="borderGradient w-min mt-6 sm:mt-10">
+                <button
+                  className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+               bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
+                  onClick={() => this.mint()}
+                >
+                  Mint
+                  <ArrowRightAltIcon
+                    sx={{
+                      color: '#ffff',
+                      fontSize: 28,
+                      marginBottom: '-1px',
+                      marginLeft: '5px',
+                    }}
+                  />
+                </button>
+              </div>
             </div>
           </div>
         ) : (

@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
-import Web3Modal from 'web3modal';
 import { ethers, BigNumber } from 'ethers';
 import { ExternalProvider, Web3Provider } from '@ethersproject/providers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -129,7 +128,7 @@ const Dapp = () => {
 
     try {
 
-      await contractVar.mint(amount, { value: tokenPrice.mul(amount) });
+      await contract?.mint(amount, { value: tokenPrice.mul(amount) });
     } catch (e) {
       errorHandler(e);
     }

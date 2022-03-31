@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
-import Web3Modal from 'web3modal';
 import { ethers, BigNumber } from 'ethers';
 import { ExternalProvider, Web3Provider } from '@ethersproject/providers';
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -46,6 +45,7 @@ const Dapp = () => {
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
   console.log('address', user?.get('ethAddress'));
   const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const loadProvider = async () => {
@@ -115,23 +115,10 @@ const Dapp = () => {
   // }, []);
 
   const mintTokens = async (amount) => {
-    console.log("mintTokens",tokenPrice.mul(amount));
-    const web3modal = new Web3Modal();
-    const connection = await web3modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
-    let contractVar = new ethers.Contract(
-          CollectionConfig.contractAddress,
-          ContractAbi,
-          provider?.getSigner()
-        );
-    console.log("contractVar",contractVar);
-    console.log("provider",provider);
-
     try {
-
-      await contractVar.mint(amount, { value: tokenPrice.mul(amount) });
+      await contract?.mint(amount, { value: tokenPrice.mul(amount) });
     } catch (e) {
-      errorHandler(e);
+      setError(e);
     }
   };
 
@@ -143,7 +130,7 @@ const Dapp = () => {
         { value: tokenPrice.mul(amount) }
       );
     } catch (e) {
-      errorHandler(e);
+      setError(e);
     }
   };
 
@@ -186,7 +173,7 @@ const Dapp = () => {
 
   const errorHandler = (error = null) => {
     let errorMessagess = 'Unknown error...';
-    console.log("errorrrr",error)
+
     if (null === error || typeof error === 'string') {
       errorMessagess = error;
     } else if (typeof error === 'object') {

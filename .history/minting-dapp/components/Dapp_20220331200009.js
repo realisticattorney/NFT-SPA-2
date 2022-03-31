@@ -354,9 +354,9 @@ const Dapp = () => {
         {contract !== undefined ? (
           <>
             {maxSupply > 0 &&
-              (totalSupply < maxSupply ? (
+              (totalSupply < maxSupply && ? (
                 <>
-                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff 
+                  <CollectionStatus
                     userAddress={user?.get('ethAddress')}
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}

@@ -356,7 +356,7 @@ const Dapp = () => {
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
                 <>
-                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff 
+                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITEL 
                     userAddress={user?.get('ethAddress')}
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}

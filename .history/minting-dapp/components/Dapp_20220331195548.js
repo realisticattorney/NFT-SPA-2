@@ -356,7 +356,7 @@ const Dapp = () => {
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
                 <>
-                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff 
+                  <CollectionStatus
                     userAddress={user?.get('ethAddress')}
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}
@@ -427,32 +427,43 @@ const Dapp = () => {
           </div>
         )}
 
-        {!user || !isSoldOut() ? (
-          <div className='{}'>
-            <div className="borderGradient w-min mt-4">
-              <button
-                className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+        {!isSoldOut() && (
+          <div className='w-full '>
+            {!user ? (
+              <div className="{}">
+                <div className="borderGradient w-min mt-4">
+                  <button
+                    className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
-                disabled={provider === undefined}
-                onClick={() =>
-                  !user ? authenticateCallback() : logoutCallback()
-                }
-              >
-                {!user ? 'Sign in' : 'Log out'}
-              </button>
-            </div>
-            {isAuthenticating && (
-              <p className="text-xs1 mt-1.5 text-gray-100">Authenticating...</p>
-            )}
-            {authError && (
-              <p className="text-xs1 mt-1.5 text-red-500">
-                {JSON.stringify(authError.message)}
-              </p>
+                    disabled={provider === undefined}
+                    onClick={() =>
+                      !user ? authenticateCallback() : logoutCallback()
+                    }
+                  >
+                    {!user ? 'Sign in' : 'Log out'}
+                  </button>
+                </div>
+                {isAuthenticating && (
+                  <p className="text-xs1 mt-1.5 text-gray-100">
+                    Authenticating...
+                  </p>
+                )}
+                {authError && (
+                  <p className="text-xs1 mt-1.5 text-red-500">
+                    {JSON.stringify(authError.message)}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className="borderGradient w-min mt-4">
+
+
+              </div>
             )}
           </div>
-        ) : null}
+        )}
       </div>
-        <ToastContainer />
+      <ToastContainer />
     </div>
   );
 };

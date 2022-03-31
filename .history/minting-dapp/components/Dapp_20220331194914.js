@@ -356,7 +356,7 @@ const Dapp = () => {
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
                 <>
-                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff 
+                  <CollectionStatus
                     userAddress={user?.get('ethAddress')}
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}
@@ -427,8 +427,8 @@ const Dapp = () => {
           </div>
         )}
 
-        {!user || !isSoldOut() ? (
-          <div className='{}'>
+        {!isSoldOut() ? (
+          <div className='w-full'>
             <div className="borderGradient w-min mt-4">
               <button
                 className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90

@@ -356,7 +356,7 @@ const Dapp = () => {
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
                 <>
-                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff 
+                  <CollectionStatus
                     userAddress={user?.get('ethAddress')}
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}
@@ -378,14 +378,14 @@ const Dapp = () => {
                       whitelistMintTokens(mintAmount)
                     }
                   />
-                  {/* <button
+                  <button
                     className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
                     disabled={provider === undefined}
                     onClick={logoutCallback}
                   >
                     Log out
-                  </button> */}
+                  </button>
                   <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (
@@ -428,7 +428,7 @@ const Dapp = () => {
         )}
 
         {!user || !isSoldOut() ? (
-          <div className='{}'>
+          <div>
             <div className="borderGradient w-min mt-4">
               <button
                 className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90

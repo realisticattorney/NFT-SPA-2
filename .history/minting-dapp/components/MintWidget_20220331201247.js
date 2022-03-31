@@ -2,46 +2,43 @@ import { utils, BigNumber } from 'ethers';
 import React from 'react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Moralis from 'moralis/types';
-interface Props {
-  maxSupply: number;
-  totalSupply: number;
-  tokenPrice: BigNumber;
-  user: Moralis.User<Moralis.Attributes> | null;
-  maxMintAmountPerTx: number;
-  isPaused: boolean;
-  isWhitelistMintEnabled: boolean;
-  isUserInWhitelist: boolean;
-  mintTokens(mintAmount: number): Promise<void>;
-  whitelistMintTokens(mintAmount: number): Promise<void>;
-}
+// interface Props {
+//   maxSupply: number;
+//   totalSupply: number;
+//   tokenPrice: BigNumber;
+//   user: Moralis.User<Moralis.Attributes> | null;
+//   maxMintAmountPerTx: number;
+//   isPaused: boolean;
+//   isWhitelistMintEnabled: boolean;
+//   isUserInWhitelist: boolean;
+//   mintTokens(mintAmount: number): Promise<void>;
+//   whitelistMintTokens(mintAmount: number): Promise<void>;
+// }
 
-interface State {
-  mintAmount: number;
-}
+// interface State {
+//   mintAmount: number;
+// }
 
-const defaultState: State = {
-  mintAmount: 1,
-};
+// const defaultState: State = {
+//   mintAmount: 1,
+// };
 
-export default class MintWidget extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
+const MintWidget = ({maxSupply, totalSupply, tokenPrice, user, maxMintAmountPerTx, isPaused,
+isWhitelistMintEnabled, isUserInWhitelist, mintTokens, whitelistMintTokens }) => {
+const [mintAmount]
 
-    this.state = defaultState;
+  const canMint = () => {
+    return !isPaused || this.canWhitelistMint();
   }
 
-  private canMint(): boolean {
-    return !this.props.isPaused || this.canWhitelistMint();
+  const canWhitelistMint = () => {
+    return isWhitelistMintEnabled && isUserInWhitelist;
   }
 
-  private canWhitelistMint(): boolean {
-    return this.props.isWhitelistMintEnabled && this.props.isUserInWhitelist;
-  }
-
-  private incrementMintAmount(): void {
+ const incrementMintAmount = () => {
     this.setState({
       mintAmount: Math.min(
-        this.props.maxMintAmountPerTx,
+        maxMintAmountPerTx,
         this.state.mintAmount + 1
       ),
     });
@@ -54,18 +51,24 @@ export default class MintWidget extends React.Component<Props, State> {
   }
 
   private async mint(): Promise<void> {
-    if (!this.props.isPaused) {
-      await this.props.mintTokens(this.state.mintAmount);
+    if (!isPaused) {
+      await mintTokens(this.state.mintAmount);
 
       return;
     }
 
-    await this.props.whitelistMintTokens(this.state.mintAmount);
+    await whitelistMintTokens(this.state.mintAmount);
   }
 
   render() {
     return (
       <>
+        <div className="text-3xl font-bold mb-6">
+          <span className="font-sans2">Total Minted: </span>
+          <span className="font-sans2 text-cyan-300">
+            {totalSupply} / {maxSupply}
+          </span>
+        </div>
         {this.canMint() ? (
           <div className="flex flex-col">
             <div className="flex-col flex ">
@@ -91,8 +94,8 @@ export default class MintWidget extends React.Component<Props, State> {
                 </div>
                 <div className="font-sans2 text-gray-300 text-lg font-medium md:mr-10 hidden sm:block">
                   {utils.formatEther(
-                    this.props.tokenPrice
-                      ? this.props.tokenPrice.mul(this.state.mintAmount)
+                    tokenPrice
+                      ? tokenPrice.mul(this.state.mintAmount)
                       : 0
                   )}{' '}
                   ETH + Gas Fee
@@ -101,14 +104,14 @@ export default class MintWidget extends React.Component<Props, State> {
               </div>
               <div className="text-gray-300 font-sans2 font-medium md:mr-10 mt-4 sm:hidden">
                 {utils.formatEther(
-                  this.props.tokenPrice
-                    ? this.props.tokenPrice.mul(this.state.mintAmount)
+                  tokenPrice
+                    ? tokenPrice.mul(this.state.mintAmount)
                     : 0
                 )}{' '}
                 ETH + Gas Fee
                 <h1>Max 5 Demons per trasaction</h1>
               </div>
-              {this.props.user && (
+              {user && (
                 <div className="borderGradient w-min mt-6 sm:mt-10">
                   <button
                     className="w-[132px] tracking-wider text-sm font-mono py-1 px-5 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
@@ -132,7 +135,7 @@ bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
         ) : (
           <div className="cannot-mint">
             <span className="emoji">⏳</span>
-            {this.props.isWhitelistMintEnabled ? (
+            {isWhitelistMintEnabled ? (
               <>
                 You are not included in the <strong>whitelist</strong>.
               </>
@@ -149,3 +152,4 @@ bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
     );
   }
 }
+export default MintWidget

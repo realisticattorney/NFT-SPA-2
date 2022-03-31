@@ -43,23 +43,23 @@ const Dapp = () => {
   const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-  console.log('address', user?.get('ethAddress'));
-  useEffect(() => {
-    const loadProvider = async () => {
-      setMaxSupply((await contract?.maxSupply()).toNumber());
-      setTotalSupply((await contract?.totalSupply()).toNumber());
-      setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
-      setTokenPrice(await contract?.cost());
-      setIsPaused(await contract?.paused());
-      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
-      setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
-    };
-    contract && loadProvider();
-  }, [contract]);
+  console.log(user.get('ethAddress'))
+  // useEffect(() => {
+  //   const loadProvider = async () => {
+  //     setMaxSupply((await contract?.maxSupply()).toNumber());
+  //     setTotalSupply((await contract?.totalSupply()).toNumber());
+  //     setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
+  //     setTokenPrice(await contract?.cost());
+  //     setIsPaused(await contract?.paused());
+  //     setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
+  //     setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
+  //   };
+  //   contract && loadProvider();
+  // }, [contract]);
 
-  const switchNetworkCallback = useCallback(async () => {
-    await Moralis.switchNetwork('0x4');
-  }, []);
+  // const switchNetworkCallback = useCallback(async () => {
+  //   await Moralis.switchNetwork('0x4');
+  // }, []);
 
   const authenticateCallback = async () => {
     authenticate({
@@ -419,7 +419,7 @@ const Dapp = () => {
         ) : null}
 
         {!user || !isSoldOut() ? (
-          <div >
+          <div className={styles.backgroundParent}>
             <div className={styles.card}>
               <Image
                 className={styles.img}

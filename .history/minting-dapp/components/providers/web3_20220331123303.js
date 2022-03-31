@@ -52,7 +52,7 @@ export default function Web3Provider({ children }) {
           ContractAbi,
           provider
         );
-      // }
+      }
       if (provider) {
         //   const registry = new ethers.Contract(
         //     registryAddress,

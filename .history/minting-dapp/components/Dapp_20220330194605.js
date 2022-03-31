@@ -419,7 +419,7 @@ const Dapp = () => {
         ) : null}
 
         {!user || !isSoldOut() ? (
-          <div >
+          <div className={styles.backgroundParent}>
             <div className={styles.card}>
               <Image
                 className={styles.img}

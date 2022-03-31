@@ -44,22 +44,22 @@ const Dapp = () => {
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
   console.log('address', user?.get('ethAddress'));
-  useEffect(() => {
-    const loadProvider = async () => {
-      setMaxSupply((await contract?.maxSupply()).toNumber());
-      setTotalSupply((await contract?.totalSupply()).toNumber());
-      setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
-      setTokenPrice(await contract?.cost());
-      setIsPaused(await contract?.paused());
-      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
-      setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
-    };
-    contract && loadProvider();
-  }, [contract]);
+  // useEffect(() => {
+  //   const loadProvider = async () => {
+  //     setMaxSupply((await contract?.maxSupply()).toNumber());
+  //     setTotalSupply((await contract?.totalSupply()).toNumber());
+  //     setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
+  //     setTokenPrice(await contract?.cost());
+  //     setIsPaused(await contract?.paused());
+  //     setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
+  //     setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
+  //   };
+  //   contract && loadProvider();
+  // }, [contract]);
 
-  const switchNetworkCallback = useCallback(async () => {
-    await Moralis.switchNetwork('0x4');
-  }, []);
+  // const switchNetworkCallback = useCallback(async () => {
+  //   await Moralis.switchNetwork('0x4');
+  // }, []);
 
   const authenticateCallback = async () => {
     authenticate({
@@ -347,7 +347,7 @@ const Dapp = () => {
             {contract !== undefined ? (
               <>
                 <button
-                  className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+                  className="w-[172px] py-1.5 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-9
                 bg-gradient-to-r from-dexfi-pink to-dexfi-cyan text-sm font-mono"
                   disabled={provider === undefined}
                   onClick={logoutCallback}
@@ -419,7 +419,7 @@ const Dapp = () => {
         ) : null}
 
         {!user || !isSoldOut() ? (
-          <div >
+          <div className={styles.backgroundParent}>
             <div className={styles.card}>
               <Image
                 className={styles.img}

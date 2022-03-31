@@ -13,7 +13,7 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 // import Logo from '../public/images/Web3Auth.svg';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { useWeb3 } from './providers/web3';
+// import { useWeb3 } from './providers/web3';
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
 // import Moralis from 'moralis';
 const ContractAbi = require('../../smart-contract/artifacts/contracts/' +
@@ -43,23 +43,22 @@ const Dapp = () => {
   const [isUserInWhitelist, setIsUserInWhitelist] = useState('');
   const [network, setNetwork] = useState(null);
   const [networkConfig, setNetworkConfig] = useState(CollectionConfig.mainnet);
-  console.log('address', user?.get('ethAddress'));
-  useEffect(() => {
-    const loadProvider = async () => {
-      setMaxSupply((await contract?.maxSupply()).toNumber());
-      setTotalSupply((await contract?.totalSupply()).toNumber());
-      setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
-      setTokenPrice(await contract?.cost());
-      setIsPaused(await contract?.paused());
-      setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
-      setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
-    };
-    contract && loadProvider();
-  }, [contract]);
+  // useEffect(() => {
+  //   const loadProvider = async () => {
+  //     setMaxSupply((await contract?.maxSupply()).toNumber());
+  //     setTotalSupply((await contract?.totalSupply()).toNumber());
+  //     setMaxMintAmountPerTx((await contract?.maxMintAmountPerTx()).toNumber());
+  //     setTokenPrice(await contract?.cost());
+  //     setIsPaused(await contract?.paused());
+  //     setIsWhitelistMintEnabled(await contract?.whitelistMintEnabled());
+  //     setIsUserInWhitelist(Whitelist.contains(user?.get('ethAddress') ?? ''));
+  //   };
+  //   contract && loadProvider();
+  // }, [contract]);
 
-  const switchNetworkCallback = useCallback(async () => {
-    await Moralis.switchNetwork('0x4');
-  }, []);
+  // const switchNetworkCallback = useCallback(async () => {
+  //   await Moralis.switchNetwork('0x4');
+  // }, []);
 
   const authenticateCallback = async () => {
     authenticate({
@@ -419,7 +418,7 @@ const Dapp = () => {
         ) : null}
 
         {!user || !isSoldOut() ? (
-          <div >
+          <div className={styles.backgroundParent}>
             <div className={styles.card}>
               <Image
                 className={styles.img}

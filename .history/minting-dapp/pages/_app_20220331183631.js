@@ -22,15 +22,11 @@ Router.events.on('routeChangeError', progress.finish);
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-
+  
   return (
     <MoralisProvider appId={APP_ID} serverUrl={SERVER_URL}>
       <Layout>
-        <Component
-          {...pageProps}
-          isServerInfo={isServerInfo}
-          key={router.asPath}
-        />
+        <Component {...pageProps} isServerInfo={isServerInfo} />
       </Layout>
     </MoralisProvider>
   );

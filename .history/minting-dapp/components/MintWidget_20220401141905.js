@@ -56,7 +56,7 @@ const MintWidget = ({
           </span>
         </div>
         <div className="mb-6 hidden sm:flex">
-          <p className="hidden md:flex text-sm pr-4 text-gray-200">{user?.get('ethAddress')}</p>
+          <p className="text-sm truncate ... px-4 text-gray-200">{user?.get('ethAddress')}</p>
         </div>
       </div>
       {canMint() ? (

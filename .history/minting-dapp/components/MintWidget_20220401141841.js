@@ -49,14 +49,14 @@ const MintWidget = ({
   return (
     <>
       <div className="flex justify-between items-center">
-        <div className="text-3xl font-bold mb-6 truncate">
+        <div className="text-3xl font-bold mb-6">
           <span className="font-sans2">Total Minted: </span>
           <span className="font-sans2 text-cyan-300">
             {totalSupply} / {maxSupply}
           </span>
         </div>
         <div className="mb-6 hidden sm:flex">
-          <p className="hidden md:flex text-sm pr-4 text-gray-200">{user?.get('ethAddress')}</p>
+          <p className="text-sm truncate ... px-4 text-gray-200">{user?.get('ethAddress')}</p>
         </div>
       </div>
       {canMint() ? (

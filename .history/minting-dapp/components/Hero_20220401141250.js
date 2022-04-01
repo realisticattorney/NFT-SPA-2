@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-2 md:col-span-1 md:col-start-2 relative row-start-2 md:row-start-1 m-5 md:m-5 z-0">
+      <div className="col-span-2 sm:col-span-1 sm:col-start-2 relative row-start-2 sm:row-start-1 m-5 sm:m-5 z-0">
         <Image
           src="/images/30.png"
           layout="fill"

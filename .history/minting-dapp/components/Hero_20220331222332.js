@@ -14,8 +14,8 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full grid grid-cols-2 grid-rows-2 md:mt-10 mb-20 px-2 md:mb-32 md:grid-rows-1 md:max-w-[1200px] md:mx-auto">
-      <div className="flex-col px-4 md:px-6 py-8 md:py-0 md:mt-0 flex-grow row-start-1 md:row-start-1 col-span-2 sm:col-span-1 space-y-6">
+    <div className="w-full grid grid-cols-2 grid-rows-2 sm:mt-10 mb-20 px-2 sm:mb-32 sm:grid-rows-1 sm:max-w-[1200px] sm:mx-auto">
+      <div className="flex-col px-4 sm:px-6 py-8 sm:py-0 sm:mt-0 flex-grow row-start-1 sm:row-start-1 col-span-2 sm:col-span-1 space-y-6">
         <div>
           <h1 className="font-serif text-6xl pt-2 sm:text-7xl tracking-wide lg:text-8xl font-bold textGradient w-min">
             Demons
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-2 md:col-span-1 md:col-start-2 relative row-start-2 md:row-start-1 m-5 md:m-5 z-0">
+      <div className="col-span-2 sm:col-span-1 sm:col-start-2 relative row-start-2 sm:row-start-1 m-5 sm:m-5 z-0">
         <Image
           src="/images/30.png"
           layout="fill"

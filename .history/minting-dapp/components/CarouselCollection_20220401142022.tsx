@@ -114,7 +114,7 @@ const CarouselCollection = () => {
       </div>
       <div>
         <div className="sm:mb-5 flex justify-between max-w-[1200px] mx-auto px-6">
-          <h1 className="font-sans2 text-sm sm:text-lg text-gray-300 max-w-[60vw] sm:max-w-[800px]">
+          <h1 className="font-sans2 text-sm sm:text-lg text-gray-300 trucante max-w-[60vw] sm:max-w-[800px]">
             The price of each Demons Gaze NFT card is 0.05 Ether, they are
             distributed on the Ethereum network, and there is a total of 2000
             cards.

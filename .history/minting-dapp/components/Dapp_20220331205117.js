@@ -310,7 +310,7 @@ const Dapp = () => {
     <div className="max-w-[1200px] mx-auto px-6">
       <div className="mb-4 sm:mb-8 flex justify-between z-0">
         <h1
-          className="font-mono text-sm sm:text-xl font-semibold self-center textGradientReverse"
+          className="font-mono text-sm sm:text-xl font-semibold self-center textGradientReverse z-50"
           id="mint"
         >
           Mint Demons Gaze
@@ -380,6 +380,7 @@ const Dapp = () => {
                     authenticateCallback={authenticateCallback}
                     logoutCallback={logoutCallback}
                   />
+                  <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (
                 <div className="collection-sold-out">

@@ -117,23 +117,25 @@ bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
               </button>
             </div>
             {user && (
-              <div className="p-[2px] sm:p-0 w-min">
-                <button
-                  className="w-[132px] py-1 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
+              <div className="p-[2px] sm:p-0 w-min sm:mr-10">
+                <div className="p-[2px] sm:p-0 borderGradient w-min sm:mr-10">
+                  <button
+                    className="w-[132px] py-1 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r  text-sm font-mono"
-                  // disabled={provider === undefined}
-                  onClick={logoutCallback}
-                >
-                  Log out
-                  <ArrowRightAltIcon
-                    sx={{
-                      color: '#ffff',
-                      fontSize: 28,
-                      marginBottom: '-1px',
-                      marginLeft: '5px',
-                    }}
-                  />
-                </button>
+                    // disabled={provider === undefined}
+                    onClick={logoutCallback}
+                  >
+                    Log out
+                    <ArrowRightAltIcon
+                      sx={{
+                        color: '#ffff',
+                        fontSize: 28,
+                        marginBottom: '-1px',
+                        marginLeft: '5px',
+                      }}
+                    />
+                  </button>
+                </div>
               </div>
             )}
           </div>

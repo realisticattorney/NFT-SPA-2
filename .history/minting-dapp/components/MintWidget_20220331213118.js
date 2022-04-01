@@ -48,17 +48,14 @@ const MintWidget = ({
 
   return (
     <>
-      <div className="flex justify-between items-center">
-        <div className="text-3xl font-bold mb-6">
-          <span className="font-sans2">Total Minted: </span>
-          <span className="font-sans2 text-cyan-300">
-            {totalSupply} / {maxSupply}
-          </span>
-        </div>
-        <div className="mb-6 hidden sm:block">
-          <p className="text-sm text-gray-200">{user?.get('ethAddress')}</p>
-        </div>
+    <div>
+      <div className="text-3xl font-bold mb-6">
+        <span className="font-sans2">Total Minted: </span>
+        <span className="font-sans2 text-cyan-300">
+          {totalSupply} / {maxSupply}
+        </span>
       </div>
+    </div>
       {canMint() ? (
         <div className="flex flex-col">
           <div className="flex-col flex ">
@@ -117,7 +114,7 @@ bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
               </button>
             </div>
             {user && (
-              <div className="p-[2px] sm:p-0 w-min">
+              <div className="borderGradient w-min sm:mr-10">
                 <button
                   className="w-[132px] py-1 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r  text-sm font-mono"

@@ -117,7 +117,7 @@ bg-gradient-to-r from-dexfi-pink to-dexfi-cyan"
               </button>
             </div>
             {user && (
-              <div className="p-[2px] sm:p-0 w-min">
+              <div className="p-0.2 w-min sm:mr-10">
                 <button
                   className="w-[132px] py-1 px-1 text-white hover:opacity-75 transition-opacity duration-300 active:translate-y-0.1 active:shadow-none active:opacity-90
                 bg-gradient-to-r  text-sm font-mono"

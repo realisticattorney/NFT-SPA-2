@@ -310,7 +310,7 @@ const Dapp = () => {
     <div className="max-w-[1200px] mx-auto px-6">
       <div className="mb-4 sm:mb-8 flex justify-between z-0">
         <h1
-          className="font-mono text-sm sm:text-xl font-semibold self-center textGradientReverse"
+          className="font-mono text-sm sm:text-xl font-semibold self-center textGradientReverse z-50"
           id="mint"
         >
           Mint Demons Gaze
@@ -356,7 +356,7 @@ const Dapp = () => {
             {maxSupply > 0 &&
               (totalSupply < maxSupply ? (
                 <>
-                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff
+                  <CollectionStatus //here I'll the banner of SOLD OUT or WHITELISTED stuff 
                     userAddress={user?.get('ethAddress')}
                     maxSupply={maxSupply}
                     totalSupply={totalSupply}
@@ -380,6 +380,7 @@ const Dapp = () => {
                     authenticateCallback={authenticateCallback}
                     logoutCallback={logoutCallback}
                   />
+                  <p>{user?.get('ethAddress')}</p>
                 </>
               ) : (
                 <div className="collection-sold-out">
@@ -419,15 +420,15 @@ const Dapp = () => {
             Loading collection data...
           </div>
         )}
+
       </div>
-      <ToastContainer />
+        <ToastContainer />
     </div>
   );
 };
 
 export default Dapp;
-{
-  /* {!user || !isSoldOut() ? (
+{/* {!user || !isSoldOut() ? (
   <div className='{}'>
     <div className="borderGradient w-min mt-4">
       <button
@@ -450,8 +451,7 @@ export default Dapp;
       </p>
     )}
   </div>
-) : null} */
-}
+) : null} */}
 {
   /* <div className="borderGradient w-min mt-4">
             {!user ? (

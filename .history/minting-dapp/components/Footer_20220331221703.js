@@ -42,10 +42,10 @@ const Footer = () => {
   }
 
   return (
-    <footer className=" text-white  font-medium  p-0 sm:p-5 max-w-[1200px] mx-auto mt-24">
-      <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 py-16 border-t border-b border-gray-700">
-        <div className="sm:row-start-2 flex-col sm:max-w-[600px] self-center mt-6 sm:mt-0 px-6 sm:px-0">
-          <div className="sm:w-[250px] mx-auto space-y-5">
+    <footer className=" text-white  font-medium  p-0 md:p-5 max-w-[1200px] mx-auto mt-24">
+      <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 py-16 border-t border-b border-gray-700">
+        <div className="md:row-start-2 flex-col md:max-w-[600px] self-center mt-6 md:mt-0 px-6 md:px-0">
+          <div className="md:w-[250px] mx-auto space-y-5">
             <h1 className="font-serif textGradient text-2xl font-bold w-min truncate">
               Demons Gaze
             </h1>
@@ -127,9 +127,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="row-start-1 sm:col-start-2 sm:row-start-2 flex-col w-min lg:min-w-[600px] self-center">
-          <div className="w-min md:w-[300px] mx-auto space-y-5 pl-6 sm:pl-0 mb-5">
-            <h1 className="text-2xl font-mono  sm:px-0">Suscribe to us</h1>
+        <div className="row-start-1 md:col-start-2 md:row-start-2 flex-col w-min md:min-w-[600px] self-center">
+          <div className="w-min md:w-[300px] mx-auto space-y-5 pl-6 mb-5">
+            <h1 className="text-2xl font-mono  md:px-0">Suscribe to us</h1>
             <form onSubmit={handleSubmit(onSubmitForm)} className="flex">
               <div className="">
                 <label htmlFor="email" className="sr-only">
@@ -170,7 +170,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="font-inter flex justify-between py-6 px-2 text-xs sm:text-sm text-gray-200 font-extralight">
+      <div className="font-inter flex justify-between py-6 px-2 text-xs md:text-sm text-gray-200 font-extralight">
         <h1>© 2022. All rights reserved</h1>
         <div className="items-center flex">
           <a
@@ -178,7 +178,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Terms & Conditions <span className="sm:mx-2">|</span>
+            Terms & Conditions <span className="md:mx-2">|</span>
           </a>
           <a
             href="https://github.com/realisticattorney"
@@ -186,7 +186,7 @@ const Footer = () => {
             rel="noreferrer"
             className="ml-1"
           >
-            Privacy Policy <span className="sm:mx-2">|</span>
+            Privacy Policy <span className="md:mx-2">|</span>
           </a>
           <a
             href="https://github.com/realisticattorney"

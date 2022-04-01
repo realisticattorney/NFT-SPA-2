@@ -17,10 +17,10 @@ const Hero = () => {
     <div className="w-full grid grid-cols-2 grid-rows-2 sm:mt-10 mb-20 px-2 sm:mb-32 sm:grid-rows-1 sm:max-w-[1200px] sm:mx-auto">
       <div className="flex-col px-4 sm:px-6 py-8 sm:py-0 sm:mt-0 flex-grow row-start-1 sm:row-start-1 col-span-2 sm:col-span-1 space-y-6">
         <div>
-          <h1 className="font-serif text-6xl pt-2 sm:text-7xl tracking-wide md:text-8xl font-bold textGradient w-min">
+          <h1 className="font-serif text-6xl pt-2 sm:text-7xl tracking-wide font-bold textGradient w-min">
             Demons
           </h1>
-          <span className="font-serif block text-6xl pt-2 sm:text-7xl md:text-8xl tracking-wide font-bold textGradient w-min">
+          <span className="font-serif block text-6xl pt-2 sm:text-8xl tracking-wide font-bold textGradient w-min">
             Gaze
           </span>
         </div>

@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0 !important;
+  margin: 0;
+  min-width: fit-content;
+}
+svg path {
+  stroke-width: 1.2;
+  /* color: #302e2f; */
+}
+
+.svg-stroke {
+  stroke-width: 3;
+}
+
+.heroBackground {
+  background: linear-gradient(180deg, #ffffff 22%, #d7caec 100%);
+}
+
+.settingsBackground {
+  background: linear-gradient(
+    111.68deg,
+    rgb(242, 236, 242) 0%,
+    rgb(232, 242, 246) 100%
+  );
+}
+
+.scaleFirstChild:hover > :first-child {
+  transform: scale(1.15);
+}
+
+.scaleFirstChild > * {
+  transition: transform 0.12s ease-in-out;
+}
+
+.textGradient {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 86, 246, 1) 0%,
+    rgba(255, 86, 246, 1) 15%,
+    rgba(185, 116, 239, 1) 45%,
+    rgba(67, 165, 227, 1) 70%,
+    rgba(67, 165, 227, 1) 100%
+  );
+}
+.textGradientReverse {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    270deg,
+    rgba(255, 86, 246, 1) 0%,
+    rgba(255, 86, 246, 1) 15%,
+    rgba(185, 116, 239, 1) 45%,
+    rgba(67, 165, 227, 1) 70%,
+    rgba(67, 165, 227, 1) 100%
+  );
+}
+
+.glossy {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.12) 46%,
+    rgba(255, 255, 255, 0.06) 63%,
+    rgba(255, 255, 255, 0.05) 78%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+  backdrop-filter: blur(12.2px);
+  -webkit-backdrop-filter: blur(10.2px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.backGroundGlossy {
+  background: rgba(32, 8, 59, 0.75);
+  background-attachment: fixed;
+  filter: blur(8px);
+}
+
+.borderGradient {
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #43a5e3, #ff56f6);
+  border-image-slice: 1;
+}
+.borderGradientReverse {
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #ff56f6, #43a5e3);
+  border-image-slice: 1;
+}
+
+.lalalala {
+  box-shadow: -50px 14px 100px 0px #ec008c, 0.5rem 0.5rem 30px #26115a;
+}
+.lalalala4 {
+  box-shadow: 50px 14px 100px 0px #ec008c, 0.5rem 0.5rem 30px #26115a;
+}
+.lalalala2 {
+  box-shadow: 120px 0 60px -50px #ec008c, 0rem 0.5rem 30px #26115a;
+}
+.lalalala3 {
+  box-shadow: 120px 0 200px 20px #6f3b93, 0rem 0.5rem 30px #422a60;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-ExtraBold.ttf');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron/Orbitron-Black.ttf');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan/Spartan-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan/Spartan-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan/Spartan-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan/Spartan-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan/Spartan-ExtraBold.ttf');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Spartan';
+  src: url('/fonts/Spartan/Spartan-Black.ttf');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-ExtraLight.ttf');
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Light.ttf');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-ExtraBold.ttf');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Black.ttf');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Radhani';
+  src: url('/fonts/Radhani/Rajdhani-Light.ttf');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Radhani';
+  src: url('/fonts/Radhani/Rajdhani-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Radhani';
+  src: url('/fonts/Radhani/Rajdhani-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Radhani';
+  src: url('/fonts/Radhani/Rajdhani-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Radhani';
+  src: url('/fonts/Radhani/Rajdhani-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/fonts/Aldrich/Aldrich-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/fonts/Aldrich/Aldrich-Regular.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
